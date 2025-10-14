@@ -111,7 +111,7 @@ export default function DarkFooter() {
               </div>
               <button className="relative px-12 sm:px-14 md:px-22 py-6 sm:py-8 bg-transparent border-2 border-[#BA8DFF]/70 overflow-hidden transition-all duration-500 group-hover:border-[#BA8DFF] group-hover:shadow-[0_0_400px_40px_rgba(186,141,255,0.9)] group-hover:scale-105">
                 <span className="relative z-10 text-xl sm:text-2xl font-light text-[#BA8DFF] group-hover:text-white transition-colors duration-500">
-                  Let's Get Started
+                  Let&apos;s Get Started
                 </span>
               </button>
               {/* Animated subtitle text */}
