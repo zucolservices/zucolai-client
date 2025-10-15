@@ -2,9 +2,16 @@
 import { useState } from "react";
 import AnimatedLogo from "./AnimatedLogo";
 import Image from "next/image";
+import HeadingTitle from "./HeadingTitle";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const pathname = usePathname();
+  const blackText = (pathname === "/use-cases" || pathname.startsWith("/blog/"))
+
+  const buttonColor = blackText ? "bg-[#000000]/15 text-[#000000]" : "bg-[#FFFFFF26] text-[#FFFFFF]"
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 p-4">
@@ -33,13 +40,13 @@ export default function Header() {
 
         {/* --- Desktop Navigation --- */}
         <nav className="hidden lg:flex items-center gap-8 ml-auto">
-          <a href="/services" className="text-sm text-gray-300 hover:text-white transition-colors">Services</a>
-          <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Resources</a>
-          <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Use Cases</a>
-          <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">About Us</a>
-          <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Contact</a>
-          <button className="px-4 py-2 text-sm text-white bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors">
-            Get Started
+          <HeadingTitle title="Services" link="/services" />
+          <HeadingTitle title="Resources" link="/resources" />
+          <HeadingTitle title="Use Cases" link="/use-cases" />
+          <HeadingTitle title="About Us" link="/about-us" />
+          <HeadingTitle title="Contact" link="/contact" />
+          <button className={`px-4 py-1 text-[16px] ${buttonColor} rounded-[8px] transition-colors`}>
+            Get in touch
           </button>
         </nav>
 
@@ -62,11 +69,13 @@ export default function Header() {
       {isMenuOpen && (
         <nav className="md:hidden px-6 py-4 bg-black/95 border-t border-white/10">
           <div className="flex flex-col gap-4">
-            <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">About</a>
-            <a href="/services" className="text-sm text-gray-300 hover:text-white transition-colors">Services</a>
-            <a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">Contact</a>
+            <HeadingTitle title="Services" link="/services" />
+            <HeadingTitle title="Resources" link="/resources" />
+            <HeadingTitle title="Use Cases" link="/use-cases" />
+            <HeadingTitle title="About Us" link="/about-us" />
+            <HeadingTitle title="Contact" link="/contact" />
             <button className="px-4 py-2 text-sm text-white bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors">
-              Get Started
+              Get in touch
             </button>
           </div>
         </nav>

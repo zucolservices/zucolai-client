@@ -1,13 +1,5 @@
+import HeadingPurple from "@/components/HeadingPurple";
 import Image from "next/image";
-
-// Reusable style constants
-const LABEL_STYLE = {
-  fontFamily: 'ChakraPetch, sans-serif',
-  fontWeight: 600,
-  fontSize: '14px',
-  lineHeight: '24px',
-  color: '#BA8DFF',
-} as const;
 
 export default function CasesHeroSection() {
   const leftImage = "/images/Screenshot 2025-09-24 at 12.07.08 PM 1.png";
@@ -15,47 +7,41 @@ export default function CasesHeroSection() {
 
   return (
     <section
-      className="relative min-h-screen flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl mt-24"
-      style={{
-        backgroundImage: `url('${backgroundImage}')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
-    >
-      <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-8 lg:pb-0">
+      className="relative min-h-screen border border-[white]">
+      <div
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        style={{
+          backgroundImage: `url('${backgroundImage}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}>
+      </div>
+      <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-8 lg:pb-0 mt-40">
         <div className="space-y-6">
-          {/* Header Section */}
           <div>
-            <p style={LABEL_STYLE} className="tracking-wide mb-2 md:mb-4">
-              Case Study
-            </p>
-            <h1 className="max-w-xl text-[#000000] text-[32px] leading-[48px] font-semibold">
+
+            <HeadingPurple title="Case Study" />
+            <h1 className="max-w-xl text-[#000000] text-[32px] leading-[48px] font-light">
               Conversational AI (Voice + Text)
             </h1>
-            <p className="max-w-xl text-[#000000] text-[16px] leading-[24px] mt-2">
+            <p className="max-w-xl text-[#000000]/60 text-[16px] leading-[24px] mt-2 font-light">
               Loan Information Voice Agents
             </p>
           </div>
 
-          {/* Client Info Section */}
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
+          <div className="flex flex-row gap-6 sm:gap-[100px]">
             <div>
-              <p style={LABEL_STYLE} className="tracking-wide mb-1">
-                Client
-              </p>
+              <HeadingPurple title="Client" />
               <p className="text-[#000000]">Vridhi Home Finance</p>
             </div>
             <div>
-              <p style={LABEL_STYLE} className="tracking-wide mb-1">
-                Industry
-              </p>
+              <HeadingPurple title="Industry" />
               <p className="text-[#000000]">Financial Services</p>
             </div>
           </div>
 
-          {/* Image Section */}
-          <div className="flex justify-center pt-4">
+          <div className="flex justify-center mt-[80px]">
             <Image
               src={leftImage}
               alt="Conversational AI Voice Agent Dashboard"

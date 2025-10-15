@@ -155,7 +155,7 @@ export default function DarkFooter() {
               </div>
             </div>
             <div className="flex flex-col space-y-4">
-              <p className="text-[16px] font-medium text-white/100">Additional</p>
+              <p className="text-[16px] font-medium text-white/100 text-right">Additional</p>
               <div className="flex gap-x-8 lg:gap-x-12">
                 {menuItems.Additional.map((item) => (
                   <a
@@ -187,7 +187,7 @@ export default function DarkFooter() {
                 ))}
               </div>
             </div>
-            
+
             {/* Additional Section */}
             <div>
               <p className="text-sm font-medium text-white/40 mb-4">Additional</p>

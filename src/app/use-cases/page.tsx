@@ -13,7 +13,6 @@ const page = () => {
                 <Header />
                 <CasesHeroSection />
                 <SectionOne />
-
             </main>
             <DarkFooter />
         </div>
