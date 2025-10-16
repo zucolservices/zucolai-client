@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const AnimatedLogo = () => {
   return (
@@ -13,13 +14,15 @@ const AnimatedLogo = () => {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <Image
-        src="/icons/Logo.png"
-        alt="Zucol.ai"
-        width={39.739437103271484}
-        height={40}
-        priority
-      />
+      <Link href="/">
+        <Image
+          src="/icons/Logo.png"
+          alt="Zucol.ai"
+          width={39.739437103271484}
+          height={40}
+          priority
+        />
+      </Link>
       <div className="flex items-center gap-1 overflow-hidden">
         <motion.div
           variants={{

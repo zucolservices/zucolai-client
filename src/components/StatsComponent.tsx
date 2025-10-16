@@ -24,7 +24,7 @@ export default function StatsComponent() {
   return (
     <section className="py-16 overflow-hidden">
       <div className="px-6 md:px-16 lg:px-24">
-        <div className="max-w-[90rem] mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
+        <div className="max-w-[70rem] mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
           <div className="w-full lg:w-[30%] mb-8 lg:mb-0 lg:sticky lg:top-32 text-center lg:text-left">
             <p className="text-sm tracking-wide mb-4 inline-block font-medium text-[#BA8DFF]">
               [Key Highlights]

@@ -10,7 +10,7 @@ const TabsCards = () => {
     const RightIcons = () => {
         return (
             <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.75 4.00004L3.58 6.83004L9.25 1.17004" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M0.75 4.00004L3.58 6.83004L9.25 1.17004" stroke="#00000099" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
 
         );
@@ -76,10 +76,10 @@ const TabsCards = () => {
                     <h2 className="text-[40px] leading-[48px] font-semibold mb-4"> Conversational AI</h2>
                     {tabContent?.map((item, index) => (
                         <div className="my-4 flex items-center gap-3 flex-shrink-0" key={index}>
-                            <div className="border rounded-full p-2 border-[#000]/60">
+                            <div className="border rounded-full p-2 border-[#000000]/60 flex-shrink-0">
                                 <RightIcons />
                             </div>
-                            <p className="text-[20px] leading-[28px] font-normal text-[#000]/60">{item}</p>
+                            <p className="text-[20px] leading-[28px] font-normal text-[#000000]/60">{item}</p>
                         </div>
                     ))}
 

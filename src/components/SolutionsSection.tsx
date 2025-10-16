@@ -38,7 +38,7 @@ export default function SolutionsSection() {
 
   return (
     <section className="py-16 px-6 md:px-16 lg:px-40">
-      <div className="max-w-[90rem] mx-auto">
+      <div className="max-w-[70rem] mx-auto">
         {/* Desktop Header Section */}
 
         {/* Mobile Header Section */}

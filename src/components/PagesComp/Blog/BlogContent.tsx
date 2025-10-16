@@ -1,29 +1,22 @@
+import GradientsLeftRight from '@/components/GradientsLeftRight';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-
-// ✅ Define a proper interface for card data
 interface BlogCard {
     id: string;
     title: string;
     description: string;
 }
-
 interface BlogContentProps {
-    cardData ?: BlogCard[];
+    cardData?: BlogCard[];
 }
 
 const BlogContent: React.FC<BlogContentProps> = ({ cardData = [] }) => {
-    const leftImage = "/images/Ellipse_1372.png"
-    const rightImage = "/images/Ellipse_1371.png"
-
 
     return (
         <div className='relative z-10'>
-            <div className="absolute top-0 left-0">
-                <Image src={leftImage} alt="" width={100} height={100} />
-            </div>
+            <GradientsLeftRight />
             <section className='max-w-[75rem] mx-auto my-[80px] px-4'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {
@@ -48,9 +41,6 @@ const BlogContent: React.FC<BlogContentProps> = ({ cardData = [] }) => {
                     }
                 </div>
             </section>
-            <div className="absolute bottom-0 right-0">
-                <Image src={rightImage} alt="" width={100} height={100} />
-            </div>
         </div>
     )
 }

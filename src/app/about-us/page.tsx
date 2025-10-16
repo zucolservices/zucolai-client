@@ -18,8 +18,6 @@ const page = () => {
                 <MissionVission />
                 <TeamSection />
                 <ValuesGrid />
-
-
             </main>
             <DarkFooter />
         </div>

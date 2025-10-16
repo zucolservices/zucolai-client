@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 // Hook to detect device type
@@ -161,9 +162,9 @@ export default function ServicesSection() {
           {/* Explore All Services */}
           <div className="bg-[#F5F9FF] rounded-xl p-6 relative overflow-hidden h-32">
             <div className="flex items-center justify-center h-full">
-              <button className="bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
+              <Link href="/services" className="cursor-pointer bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
                 Explore All Services
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -317,9 +318,9 @@ export default function ServicesSection() {
                   className="object-contain"
                 />
               </div>
-              <button className="bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
+              <Link href="/services" className="cursor-pointer bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
                 Explore All Services
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -330,7 +331,7 @@ export default function ServicesSection() {
   // Web View Render (Original Complex Grid Layout)
   const renderWebView = () => (
     <section className="py-32 px-24 bg-white overflow-hidden">
-      <div className="max-w-[90rem] mx-auto">
+      <div className="max-w-[70rem] mx-auto">
         <div className="mb-12">
           <p className="text-purple-label">
             [ Our Services ]
@@ -347,7 +348,7 @@ export default function ServicesSection() {
 
         {/* Services Grid - Original complex layout for web */}
         <div className="grid grid-cols-12 gap-6">
-          
+
           {/* Industrial-Grade User Experience Card - Row 1 */}
           <div className="col-span-7 bg-[#FFF8F5] hover:border-[#FF7847] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
             <div className="flex flex-col h-full justify-end relative z-10">
@@ -492,9 +493,9 @@ export default function ServicesSection() {
 
               {/* Explore Button */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-black text-white px-7 py-4 rounded-xl text-base font-medium group-hover:bg-[#B347FF] transition-colors duration-300">
+                <Link href="/services" className="cursor-pointer bg-black text-white px-7 py-4 rounded-xl text-base font-medium group-hover:bg-[#B347FF] transition-colors duration-300">
                   Explore All Services
-                </button>
+                </Link>
               </div>
             </div>
           </div>

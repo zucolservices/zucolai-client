@@ -15,13 +15,11 @@ const SectionOne = () => {
                 </div>
                 <div className="space-y-4">
                     <div className="text-[#000000] text-[40px] leading-[48px] font-light">Challanges</div>
-                    <ul className="text-[#000000]/60 text-[16px] leading-[24px] font-light">
+                    <ul className="list-disc pl-6 text-[#000000]/60 text-[16px] leading-[24px] font-light">
                         <li>High volume of repetitive queries about loan information.</li>
                         <li>Manual agents struggled to respond quickly and accurately.</li>
                         <li>Lack of multilingual</li>
-
                     </ul>
-
 
                 </div>
                 <div className="space-y-4">
@@ -32,15 +30,39 @@ const SectionOne = () => {
                 </div>
                 <div className="space-y-4">
                     <div className="text-[#000000] text-[40px] leading-[48px] font-light">Results</div>
-                    <ul className="text-[#000000]/60 text-[16px] leading-[24px] font-light">
+                    <ul className="list-disc pl-6 text-[#000000]/60 text-[16px] leading-[24px] font-light">
+                        <li>High volume of repetitive queries about loan information.</li>
+                        <li>Manual agents struggled to respond quickly and accurately.</li>
+                        <li>Lack of multilingual</li>
+                    </ul>
+                </div>
+
+                <div className="">
+                    <div className="text-[#000000] text-[40px] leading-[48px] font-light">Features</div>
+                    <p className="my-4 text-[#000000]/60 text-[16px] leading-[24px] font-light">Turpis ultrices imperdiet in id. Diam dui purus blandit urna</p>
+                    <p className="text-[#000000]/60 text-[16px] leading-[24px] font-light">1. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus. </p>
+                    <ul className="list-disc pl-6 text-[#000000]/60 text-[16px] leading-[24px] font-light">
+                        <li>High volume of repetitive queries about loan information.</li>
+                        <li>Manual agents struggled to respond quickly and accurately.</li>
+                        <li>Lack of multilingual</li>
+                    </ul>
+                    <p className="mt-4 text-[#000000]/60 text-[16px] leading-[24px] font-light">2. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus. </p>
+                    <ul className="list-disc pl-6 text-[#000000]/60 text-[16px] leading-[24px] font-light">
                         <li>High volume of repetitive queries about loan information.</li>
                         <li>Manual agents struggled to respond quickly and accurately.</li>
                         <li>Lack of multilingual</li>
 
                     </ul>
+                    <p className="mt-4 text-[#000000]/60 text-[16px] leading-[24px] font-light">3. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus. </p>
+                    <ul className="list-disc pl-6 text-[#000000]/60 text-[16px] leading-[24px] font-light">
+                        <li>High volume of repetitive queries about loan information.</li>
+                        <li>Manual agents struggled to respond quickly and accurately.</li>
+                        <li>Lack of multilingual</li>
+                    </ul>
 
 
                 </div>
+
                 <div className="space-y-4">
                     <div className="text-[#000000] text-[40px] leading-[48px] font-light">Conclusion</div>
                     <p className="text-[#000000]/60 text-[16px] leading-[24px] font-light">Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus. Turpis ultrices imperdiet in id. Diam dui purus blandit urna felis. Dis ultrices volutpat tellus vulputate eu eget tortor faucibus aliquet. Nulla diam ac et eget id enim. Dui malesuada condimentum mi congue feugiat tortor vestibulum tellus. Est accumsan fringilla at diam.</p>

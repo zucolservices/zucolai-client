@@ -1,3 +1,4 @@
+import GradientsLeftRight from "@/components/GradientsLeftRight";
 import HeadingPurple from "@/components/HeadingPurple";
 import Image from "next/image";
 
@@ -17,6 +18,7 @@ export default function CasesHeroSection() {
           backgroundRepeat: "no-repeat"
         }}>
       </div>
+      <GradientsLeftRight />
       <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-8 lg:pb-0 mt-40">
         <div className="space-y-6">
           <div>
