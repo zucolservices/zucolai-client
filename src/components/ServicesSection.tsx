@@ -62,7 +62,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/Industrial-Grade-User-Experience.png"
+                  src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -84,7 +84,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/SwiftCollaboration.png"
+                  src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -106,7 +106,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/Full-StackAIPartner.png"
+                  src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -128,7 +128,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/SecureDesign.png"
+                  src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -150,7 +150,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/VerticalizedAIInnovation.png"
+                  src="/images/svgs/aiinnovation.svg"
                   alt="Verticalized AI Innovation"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -195,7 +195,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/Industrial-Grade-User-Experience.png"
+                  src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
                   fill
                   className="object-contain"
@@ -216,7 +216,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/SwiftCollaboration.png"
+                  src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
                   fill
                   className="object-contain"
@@ -238,7 +238,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/Full-StackAIPartner.png"
+                  src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
                   fill
                   className="object-contain"
@@ -259,7 +259,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/SecureDesign.png"
+                  src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
                   fill
                   className="object-contain"
@@ -281,7 +281,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/VerticalizedAIInnovation.png"
+                  src="/images/svgs/aiinnovation.svg"
                   alt="Verticalized AI Innovation"
                   fill
                   className="object-contain"
@@ -302,7 +302,7 @@ export default function ServicesSection() {
             <div className="flex items-center justify-center h-full relative">
               <div className="absolute top-2 right-2 w-16 h-16">
                 <Image
-                  src="/images/ExploreAllServicesFirstStar.png"
+                  src="/images/svgs/start11.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}
@@ -311,7 +311,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute bottom-2 left-2 w-16 h-16">
                 <Image
-                  src="/images/ExploreAllServicesSecondStar.png"
+                  src="/images/svgs/start12.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}
@@ -362,7 +362,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[50%] -translate-y-1/2 right-[10px] w-[40%] max-w-[250px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <Image
-                  src="/images/Industrial-Grade-User-Experience.png"
+                  src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
                   fill
                   className="object-contain"
@@ -385,7 +385,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[50%] -translate-y-1/2 right-[10px] w-[40%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <Image
-                  src="/images/SwiftCollaboration.png"
+                  src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
                   fill
                   className="object-contain"
@@ -408,7 +408,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[30%] -translate-y-1/2 right-[-20px] w-[50%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-12">
                 <Image
-                  src="/images/Full-StackAIPartner.png"
+                  src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
                   fill
                   className="object-contain"
@@ -431,7 +431,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[50%] -translate-y-1/2 right-[-20px] w-[50%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-13">
                 <Image
-                  src="/images/SecureDesign.png"
+                  src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
                   fill
                   className="object-contain"
@@ -455,7 +455,7 @@ export default function ServicesSection() {
               <div className="absolute top-[50%] -translate-y-1/2 right-[10px] w-[40%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/VerticalizedAIInnovation.png"
+                    src="/images/svgs/aiinnovation.svg"
                     alt="Verticalized AI Innovation"
                     fill
                     className="object-contain"
@@ -472,7 +472,7 @@ export default function ServicesSection() {
               {/* First Star - Top Right */}
               <div className="absolute top-2 right-2 w-16 h-16 transition-all duration-700 group-hover:scale-110 group-hover:rotate-12">
                 <Image
-                  src="/images/ExploreAllServicesFirstStar.png"
+                  src="/images/svgs/start11.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}
@@ -483,7 +483,7 @@ export default function ServicesSection() {
               {/* Second Star - Bottom Left */}
               <div className="absolute bottom-2 left-2 w-16 h-16 transition-all duration-700 group-hover:scale-110 group-hover:-rotate-12">
                 <Image
-                  src="/images/ExploreAllServicesSecondStar.png"
+                  src="/images/svgs/start12.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}

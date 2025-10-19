@@ -25,7 +25,7 @@ const OfferProcess = () => {
 
 
     return (
-        <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-16 pt-8">
+        <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-8 md:pb-16 pt-8">
             <div className='lg:flex flex-col md:flex-row space-y-6 lg:space-y-0 gap-4'>
                 <div className='space-y-6'>
                     <p
@@ -56,7 +56,7 @@ const OfferProcess = () => {
                             </div>
                             <div className="">
                                 <Image
-                                    src="/images/image 1.png"
+                                    src="/images/svgs/image 1.svg"
                                     alt="Verticalized AI Innovation"
                                     height={228}
                                     width={228}
@@ -96,7 +96,7 @@ const OfferProcess = () => {
                             </div>
                             <div className="">
                                 <Image
-                                    src="/images/Screenshot 2025-09-24 at 2.55.00 PM 1 (1).png"
+                                    src="/images/svgs/image2.svg"
                                     alt="Verticalized AI Innovation"
                                     height={259}
                                     width={259}

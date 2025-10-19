@@ -20,7 +20,7 @@ export default function Header() {
         {/* --- Mobile Only: Logo icon on the left --- */}
         <div className="block md:hidden">
           <Image
-            src="/icons/Logo.png"
+            src="/logos/logoo.svg"
             alt="Zucol.ai"
             width={40}
             height={40}

@@ -33,7 +33,7 @@ const TabsCards = () => {
     ];
 
     return (
-        <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-16 pt-8">
+        <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto md:pb-16 pt-8">
             {/* Tabs Container */}
             <div className="w-full overflow-x-auto  scrollbar-hide">
                 <div className="flex gap-2">

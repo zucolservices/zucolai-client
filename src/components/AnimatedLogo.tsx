@@ -16,7 +16,7 @@ const AnimatedLogo = () => {
     >
       <Link href="/">
         <Image
-          src="/icons/Logo.png"
+          src="/logos/logoo.svg"
           alt="Zucol.ai"
           width={39.739437103271484}
           height={40}
@@ -32,7 +32,7 @@ const AnimatedLogo = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           <Image
-            src="/icons/ZucolLogo.png"
+            src="/logos/zucol.svg"
             alt="Zucol.ai"
             width={75.36}
             height={18.44}
@@ -47,7 +47,7 @@ const AnimatedLogo = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           <Image
-            src="/images/aismall.png"
+            src="/logos/ai.svg"
             alt="Zucol.ai"
             width={33.8}
             height={20}

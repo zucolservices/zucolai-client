@@ -1,10 +1,72 @@
 "use client";
 
 import GradientsLeftRight from "@/components/GradientsLeftRight";
+import { useEffect, useRef, useState } from "react";
 
 const PowerSection = () => {
 
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [isInView, setIsInView] = useState(false);
+    const [animatedWords, setAnimatedWords] = useState(new Set<number>());
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsInView(true);
+                }
+            },
+            { threshold: 0.1, rootMargin: "0px" }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (isInView) {
+            const lines = [
+                "Generative AI reshapes how businesses",
+                "create and innovate. It produces text,",
+                "images, and videos, helping you move",
+                "faster and deliver smarter solutions."
+            ];
+
+            let globalWordIndex = 0;
+
+            lines.forEach((line) => {
+                const wordsInLine = line.split(" ");
+
+                wordsInLine.forEach((_, wordIndexInLine) => {
+                    const currentWordIndex = globalWordIndex;
+                    setTimeout(() => {
+                        setAnimatedWords(prev => new Set([...prev, currentWordIndex]));
+                    }, wordIndexInLine * 80);
+                    globalWordIndex++;
+                });
+            });
+        }
+    }, [isInView]);
+
+    const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {
+        return text.split("  ").map((word, i) => {
+            const wordIndex = startIndex + i;
+            const isAnimated = animatedWords.has(wordIndex);
+
+            return (
+                <span
+                    key={wordIndex}
+                    className={`inline-block transition-colors duration-300 ${isAnimated ? "text-black" : "text-gray-300"
+                        }`}
+                >
+                    {word}{" "}
+                </span>
+            );
+        });
+    };
 
 
     return (
@@ -12,7 +74,7 @@ const PowerSection = () => {
 
             <GradientsLeftRight />
 
-            <div className="w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-32 pt-16 lg:pt-32">
+            <div className="w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-8 md:pb-32 pt-16 lg:pt-32">
                 <p
                     style={{
                         fontFamily: 'ChakraPetch, sans-serif',
@@ -26,9 +88,12 @@ const PowerSection = () => {
                 >
                     [ Power of Conversational AI ]
                 </p>
-                <div className=" ">
+                <div className=" " ref={sectionRef}>
                     <div className="max-w-xl text-left text-[#00000066]/40 text-[32px] leading-[40px]">
-                        Generative AI reshapes how businesses create and innovate. It produces text, images, and videos, helping you move faster and deliver smarter solutions.
+                        {renderAnimatedText("Generative AI reshapes how businesses ",)}
+                        {renderAnimatedText("create and innovate. It produces text,", 0)}
+                        {renderAnimatedText("images, and videos, helping you move", 8)}
+                        {renderAnimatedText("faster and deliver smarter solutions.", 16)}
                     </div>
                 </div>
             </div>
