@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 // Hook to detect device type
@@ -61,7 +62,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/Industrial-Grade-User-Experience.png"
+                  src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -83,7 +84,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/SwiftCollaboration.png"
+                  src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -105,7 +106,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/Full-StackAIPartner.png"
+                  src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -127,7 +128,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/SecureDesign.png"
+                  src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -149,7 +150,7 @@ export default function ServicesSection() {
               </div>
               <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
-                  src="/images/VerticalizedAIInnovation.png"
+                  src="/images/svgs/aiinnovation.svg"
                   alt="Verticalized AI Innovation"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-500"
@@ -161,9 +162,9 @@ export default function ServicesSection() {
           {/* Explore All Services */}
           <div className="bg-[#F5F9FF] rounded-xl p-6 relative overflow-hidden h-32">
             <div className="flex items-center justify-center h-full">
-              <button className="bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
+              <Link href="/services" className="cursor-pointer bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
                 Explore All Services
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -194,7 +195,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/Industrial-Grade-User-Experience.png"
+                  src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
                   fill
                   className="object-contain"
@@ -215,7 +216,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/SwiftCollaboration.png"
+                  src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
                   fill
                   className="object-contain"
@@ -237,7 +238,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/Full-StackAIPartner.png"
+                  src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
                   fill
                   className="object-contain"
@@ -258,7 +259,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/SecureDesign.png"
+                  src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
                   fill
                   className="object-contain"
@@ -280,7 +281,7 @@ export default function ServicesSection() {
             <div className="flex flex-col h-full justify-between">
               <div className="absolute top-4 right-4 w-20 h-20">
                 <Image
-                  src="/images/VerticalizedAIInnovation.png"
+                  src="/images/svgs/aiinnovation.svg"
                   alt="Verticalized AI Innovation"
                   fill
                   className="object-contain"
@@ -301,7 +302,7 @@ export default function ServicesSection() {
             <div className="flex items-center justify-center h-full relative">
               <div className="absolute top-2 right-2 w-16 h-16">
                 <Image
-                  src="/images/ExploreAllServicesFirstStar.png"
+                  src="/images/svgs/start11.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}
@@ -310,16 +311,16 @@ export default function ServicesSection() {
               </div>
               <div className="absolute bottom-2 left-2 w-16 h-16">
                 <Image
-                  src="/images/ExploreAllServicesSecondStar.png"
+                  src="/images/svgs/start12.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}
                   className="object-contain"
                 />
               </div>
-              <button className="bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
+              <Link href="/services" className="cursor-pointer bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
                 Explore All Services
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -330,7 +331,7 @@ export default function ServicesSection() {
   // Web View Render (Original Complex Grid Layout)
   const renderWebView = () => (
     <section className="py-32 px-24 bg-white overflow-hidden">
-      <div className="max-w-[90rem] mx-auto">
+      <div className="max-w-[70rem] mx-auto">
         <div className="mb-12">
           <p className="text-purple-label">
             [ Our Services ]
@@ -347,7 +348,7 @@ export default function ServicesSection() {
 
         {/* Services Grid - Original complex layout for web */}
         <div className="grid grid-cols-12 gap-6">
-          
+
           {/* Industrial-Grade User Experience Card - Row 1 */}
           <div className="col-span-7 bg-[#FFF8F5] hover:border-[#FF7847] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
             <div className="flex flex-col h-full justify-end relative z-10">
@@ -361,7 +362,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[50%] -translate-y-1/2 right-[10px] w-[40%] max-w-[250px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <Image
-                  src="/images/Industrial-Grade-User-Experience.png"
+                  src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
                   fill
                   className="object-contain"
@@ -384,7 +385,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[50%] -translate-y-1/2 right-[10px] w-[40%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <Image
-                  src="/images/SwiftCollaboration.png"
+                  src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
                   fill
                   className="object-contain"
@@ -407,7 +408,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[30%] -translate-y-1/2 right-[-20px] w-[50%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-12">
                 <Image
-                  src="/images/Full-StackAIPartner.png"
+                  src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
                   fill
                   className="object-contain"
@@ -430,7 +431,7 @@ export default function ServicesSection() {
               </div>
               <div className="absolute top-[50%] -translate-y-1/2 right-[-20px] w-[50%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-13">
                 <Image
-                  src="/images/SecureDesign.png"
+                  src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
                   fill
                   className="object-contain"
@@ -454,7 +455,7 @@ export default function ServicesSection() {
               <div className="absolute top-[50%] -translate-y-1/2 right-[10px] w-[40%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/VerticalizedAIInnovation.png"
+                    src="/images/svgs/aiinnovation.svg"
                     alt="Verticalized AI Innovation"
                     fill
                     className="object-contain"
@@ -471,7 +472,7 @@ export default function ServicesSection() {
               {/* First Star - Top Right */}
               <div className="absolute top-2 right-2 w-16 h-16 transition-all duration-700 group-hover:scale-110 group-hover:rotate-12">
                 <Image
-                  src="/images/ExploreAllServicesFirstStar.png"
+                  src="/images/svgs/start11.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}
@@ -482,7 +483,7 @@ export default function ServicesSection() {
               {/* Second Star - Bottom Left */}
               <div className="absolute bottom-2 left-2 w-16 h-16 transition-all duration-700 group-hover:scale-110 group-hover:-rotate-12">
                 <Image
-                  src="/images/ExploreAllServicesSecondStar.png"
+                  src="/images/svgs/start12.svg"
                   alt="Decorative star"
                   width={64}
                   height={64}
@@ -492,9 +493,9 @@ export default function ServicesSection() {
 
               {/* Explore Button */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-black text-white px-7 py-4 rounded-xl text-base font-medium group-hover:bg-[#B347FF] transition-colors duration-300">
+                <Link href="/services" className="cursor-pointer bg-black text-white px-7 py-4 rounded-xl text-base font-medium group-hover:bg-[#B347FF] transition-colors duration-300">
                   Explore All Services
-                </button>
+                </Link>
               </div>
             </div>
           </div>

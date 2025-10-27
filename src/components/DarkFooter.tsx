@@ -111,7 +111,7 @@ export default function DarkFooter() {
               </div>
               <button className="relative px-12 sm:px-14 md:px-22 py-6 sm:py-8 bg-transparent border-2 border-[#BA8DFF]/70 overflow-hidden transition-all duration-500 group-hover:border-[#BA8DFF] group-hover:shadow-[0_0_400px_40px_rgba(186,141,255,0.9)] group-hover:scale-105">
                 <span className="relative z-10 text-xl sm:text-2xl font-light text-[#BA8DFF] group-hover:text-white transition-colors duration-500">
-                  Let's Get Started
+                  Let&apos;s Get Started
                 </span>
               </button>
               {/* Animated subtitle text */}
@@ -155,7 +155,7 @@ export default function DarkFooter() {
               </div>
             </div>
             <div className="flex flex-col space-y-4">
-              <p className="text-[16px] font-medium text-white/100">Additional</p>
+              <p className="text-[16px] font-medium text-white/100 text-right">Additional</p>
               <div className="flex gap-x-8 lg:gap-x-12">
                 {menuItems.Additional.map((item) => (
                   <a
@@ -187,7 +187,7 @@ export default function DarkFooter() {
                 ))}
               </div>
             </div>
-            
+
             {/* Additional Section */}
             <div>
               <p className="text-sm font-medium text-white/40 mb-4">Additional</p>

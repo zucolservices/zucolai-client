@@ -71,9 +71,9 @@
 
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-interface GetInTouchSectionProps {}
+// interface GetInTouchSectionProps {}
 
 export default function GetInTouchSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -108,12 +108,12 @@ export default function GetInTouchSection() {
         "Zucol.ai combines tech and business to deliver effective systems.",
         "We power great innovation across multiple industries."
       ];
-      
+
       let globalWordIndex = 0;
-      
+
       lines.forEach((line) => {
         const wordsInLine = line.split(" ");
-        
+
         wordsInLine.forEach((_, wordIndexInLine) => {
           const currentWordIndex = globalWordIndex;
           setTimeout(() => {
@@ -126,17 +126,15 @@ export default function GetInTouchSection() {
     }
   }, [isInView]);
 
-  const renderAnimatedText = (text: string, startIndex: number = 0): JSX.Element[] => {
-    return text.split(" ").map((word, i) => {
+  const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {    return text.split("  ").map((word, i) => {
       const wordIndex = startIndex + i;
       const isAnimated = animatedWords.has(wordIndex);
-      
+
       return (
         <span
           key={wordIndex}
-          className={`inline-block transition-colors duration-300 ${
-            isAnimated ? "text-black" : "text-gray-300"
-          }`}
+          className={`inline-block transition-colors duration-300 ${isAnimated ? "text-black" : "text-gray-300"
+            }`}
         >
           {word}{" "}
         </span>
@@ -152,10 +150,10 @@ export default function GetInTouchSection() {
       </div>
 
       {/* Floating gradient orbs - responsive sizes */}
-      <div className="absolute top-0 left-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-emerald-200 to-green-300 opacity-30 blur-3xl rounded-full animate-pulse" 
-           style={{ animationDuration: '4s' }} />
-      <div className="absolute bottom-0 right-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-purple-200 to-indigo-300 opacity-30 blur-3xl rounded-full animate-pulse" 
-           style={{ animationDuration: '6s', animationDelay: '2s' }} />
+      <div className="absolute top-0 left-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-emerald-200 to-green-300 opacity-30 blur-3xl rounded-full animate-pulse"
+        style={{ animationDuration: '4s' }} />
+      <div className="absolute bottom-0 right-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-purple-200 to-indigo-300 opacity-30 blur-3xl rounded-full animate-pulse"
+        style={{ animationDuration: '6s', animationDelay: '2s' }} />
 
       <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-left z-10 w-full" ref={sectionRef}>
         <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] lg:text-5xl leading-tight md:leading-snug">
@@ -172,19 +170,14 @@ export default function GetInTouchSection() {
 
         {/* Buttons with enhanced hover effects - responsive */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12">
-          <button className="group bg-black text-white text-sm px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg cursor-pointer w-full sm:w-auto">
-            <span className="group-hover:tracking-wide transition-all duration-200">About us</span>
+          <button className="cursor-pointer bg-[#000000] rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
+            About us
           </button>
-          <button className="group text-black text-sm px-4 py-2 rounded-md border border-transparent hover:border-black transition-all duration-300 ease-out transform hover:scale-105 cursor-pointer focus:outline-none w-full sm:w-auto">
-            <span className="group-hover:tracking-wide transition-all duration-200">Get in touch</span>
+          <button className="cursor-pointer rounded-[10px] py-[5px] px-[15px] text-[#000000] text-[16px] font-light leading-[28px]">
+            Get in touch
           </button>
-        </div>
-
-        {/* Subtle animated underline - responsive */}
-        <div className={`mt-6 sm:mt-8 h-0.5 bg-gradient-to-r from-emerald-400 to-purple-400 transition-all duration-1000 ${
-          isInView ? 'w-16 sm:w-20 md:w-24 opacity-100' : 'w-0 opacity-0'
-        }`} />
+        </div>         
       </div>
     </section>
-      );
+  );
 };

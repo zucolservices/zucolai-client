@@ -3,21 +3,21 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const companies = [
-  { name: "Dropbox", logo: "/images/hubspot.png", width: 140 },
-  { name: "Netflix", logo: "/images/faramer.png", width: 130 },
-  { name: "Buffer", logo: "/images/Stripe.png", width: 125 },
-  { name: "Stripe", logo: "/images/hubspot.png", width: 135 },
-  { name: "Framer", logo: "/images/Stripe.png", width: 120 },
-  { name: "Dropbox", logo: "/images/hubspot.png", width: 140 },
-  { name: "Netflix", logo: "/images/faramer.png", width: 130 },
-  { name: "Buffer", logo: "/images/Stripe.png", width: 125 },
+  { name: "Dropbox", logo: "/icons/hubspot.svg", width: 140 },
+  { name: "Netflix", logo: "/icons/framer.svg", width: 130 },
+  { name: "Buffer", logo: "/icons/stripe.svg", width: 125 },
+  { name: "Stripe", logo: "/icons/hubspot.svg", width: 135 },
+  { name: "Framer", logo: "/icons/stripe.svg", width: 120 },
+  { name: "Dropbox", logo: "/icons/hubspot.svg", width: 140 },
+  { name: "Netflix", logo: "/icons/framer.svg", width: 130 },
+  { name: "Buffer", logo: "/icons/stripe.svg", width: 125 },
 ];
 
 export default function TrustedCompanies() {
 
   return (
     <section className="py-16 px-6 md:px-16 lg:px-24 bg-[#FAFAFA]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[70rem] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-[2.75rem] leading-[1.2] tracking-[-0.03em]">
             <span className="text-heading-display-light">Trusted by top <br></br> companies</span>&nbsp;
@@ -28,7 +28,7 @@ export default function TrustedCompanies() {
         <div className="relative overflow-hidden py-8">
           <div className="absolute left-0 top-0 w-[100px] h-full z-10 bg-gradient-to-r from-[#FAFAFA] to-transparent" />
           <div className="absolute right-0 top-0 w-[100px] h-full z-10 bg-gradient-to-l from-[#FAFAFA] to-transparent" />
-          
+
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: ["-100%", "0%"] }}

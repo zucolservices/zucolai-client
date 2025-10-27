@@ -56,17 +56,17 @@ export default function FaqSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#F8F8FF] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-lg hover:bg-white group relative"
+              className="bg-[#F6F6F6] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-lg hover:bg-white group relative"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#BA8DFF]/0 via-[#BA8DFF]/0 to-[#BA8DFF]/0 group-hover:via-[#BA8DFF]/5 transition-all duration-500 rounded-2xl" />
               <div className="p-6 flex items-center justify-between relative z-10">
-                <h3 className="text-lg font-medium text-[#111827] group-hover:text-[#111827]/80 transition-colors duration-300">
+                <h3 className="text-[16px] font-light text-[#111827] group-hover:text-[#111827]/80 transition-colors duration-300">
                   {faq.question}
                 </h3>
                 <div className={`transform transition-all duration-300 ${openIndex === index ? 'rotate-180 text-[#BA8DFF]' : 'text-[#BA8DFF]/60 group-hover:text-[#BA8DFF]'}`}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#BA8DFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 9L12 15L18 9" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </div>

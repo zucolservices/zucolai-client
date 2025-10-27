@@ -38,7 +38,7 @@ export default function SolutionsSection() {
 
   return (
     <section className="py-16 px-6 md:px-16 lg:px-40">
-      <div className="max-w-[90rem] mx-auto">
+      <div className="max-w-[70rem] mx-auto">
         {/* Desktop Header Section */}
 
         {/* Mobile Header Section */}
@@ -75,7 +75,7 @@ export default function SolutionsSection() {
                 Designed for Adoption.
               </h2>
               {industries.map((industry, index) => (
-                <div key={industry.name} className="relative mb-2 lg:mb-4">
+                <div key={index} className="relative mb-2 lg:mb-4">
                 <div
                   onClick={() => {
                     setSelected(industry);
@@ -124,7 +124,7 @@ export default function SolutionsSection() {
                 <div className="flex space-x-6 min-w-max px-4 justify-center md:justify-start">
                   {industries.map((industry, index) => (
                     <button
-                      key={industry.name}
+                      key={index}
                       onClick={() => {
                         setSelected(industry);
                         setProgress(0);
