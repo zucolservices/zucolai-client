@@ -64,10 +64,10 @@ export default function DarkFooter() {
             <div className="flex flex-col items-start lg:items-end">
               <p className="text-[16px] font-light text-white/50">Reach us at</p>
               <a
-                href="mailto:hellozucol@gmail.com"
+                href="mailto:info@zucol.ai"
                 className="text-[16px] font-white/100 hover:text-white/100 transition-colors duration-300"
               >
-                hellozucol@gmail.com
+                info@zucol.ai
               </a>
             </div>
           </div>
