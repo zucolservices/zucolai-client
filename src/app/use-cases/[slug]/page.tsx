@@ -1,0 +1,121 @@
+import React from "react";
+import Link from "next/link";
+import CaseStudyDetailContent, { CaseStudyDetailData } from "@/components/case-studies/CaseStudyDetailContent";
+import Header from '@/components/Header';
+import DarkFooter from "@/components/DarkFooter";
+
+const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
+  "loan-information-voice-agent-vridhi-home-finance": {
+    title: "Conversational AI (Voice + Text)",
+    subtitle: "Loan Information Voice Agent",
+    client: "Vridhi Home Finance",
+    industry: "Financial Services",
+    heroImage: "/images/use-cases/1.png",
+    backgroundImage: "/images/image_1001978347.png",
+
+    // SectionOne content
+    background:
+      "Vridhi Home Finance needed a scalable solution to handle thousands of customer queries related to loan products and eligibility. Manual call centers were costly and often resulted in long wait times.",
+    challenges: [
+      "High volume of repetitive queries about loan information.",
+      "Manual agents struggled to respond quickly and accurately.",
+      "Lack of multilingual support.",
+    ],
+    solution:
+      "We implemented a voice-enabled AI assistant capable of answering FAQs, collecting lead information, and routing complex queries. The assistant supports both voice and text channels, integrates with CRM, and provides analytics for continuous improvement.",
+    results: [
+      "Significant reduction in response latency.",
+      "Higher lead capture with structured data collection.",
+      "Lower support costs and improved customer experience.",
+    ],
+    featuresLead: "Turpis ultrices imperdiet in id. Diam dui purus blandit urna.",
+    featuresPara1:
+      "1. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus.",
+    featuresList1: [
+      "High volume of repetitive queries about loan information.",
+      "Manual agents struggled to respond quickly and accurately.",
+      "Lack of multilingual",
+    ],
+    featuresPara2:
+      "2. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus.",
+    featuresList2: [
+      "High volume of repetitive queries about loan information.",
+      "Manual agents struggled to respond quickly and accurately.",
+      "Lack of multilingual",
+    ],
+    featuresPara3:
+      "3. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus.",
+    featuresList3: [
+      "High volume of repetitive queries about loan information.",
+      "Manual agents struggled to respond quickly and accurately.",
+      "Lack of multilingual",
+    ],
+    conclusion:
+      "Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus. Turpis ultrices imperdiet in id. Diam dui purus blandit urna felis. Dis ultrices volutpat tellus vulputate eu eget tortor faucibus aliquet.",
+  },
+   "ai-learner-desklib": {
+    title: "AI Learner",
+    subtitle: "Interactive AI-Based Lecture Generator",
+    client: "Desklib",
+    industry: "EdTech",
+    heroImage: "/images/use-cases/ai-learner.png", // replace with your actual image
+    backgroundImage: "/images/use-cases/ai-learner-bg.png", // replace with your actual asset
+
+    background:
+      "Desklib wanted to enhance its learning platform by enabling interactive lectures based on uploaded study material.",
+
+    challenges: [
+      "Students required personalized learning support.",
+      "Manual lecture delivery was not scalable.",
+    ],
+
+    solution:
+      "Developed an AI Learner bot that generates and delivers lectures automatically from uploaded content, making study material more engaging and interactive.",
+
+    results: [
+      "Improved learning engagement.",
+      "Scalable personalized lecture delivery for thousands of students.",
+    ],
+
+    // Leaving features & conclusion blank since not present in source
+    featuresLead: "",
+    featuresPara1: "",
+    featuresList1: [],
+    featuresPara2: "",
+    featuresList2: [],
+    featuresPara3: "",
+    featuresList3: [],
+    conclusion: "",
+  },
+};
+
+function slugify(input: string) {
+  return input.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+export default function CaseStudyDetail({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+  const data = CASE_STUDIES[slug];
+
+  // Fallback: if unknown slug, show simple not found
+  if (!data) {
+    return (
+      <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto py-16">
+        <h1 className="text-2xl md:text-3xl font-light">Case Study Not Found</h1>
+        <p className="mt-4 text-[#111]/60">The requested case study does not exist.</p>
+        <Link href="/services" className="mt-6 inline-block text-[#2A71FF] underline">Back to Services</Link>
+      </section>
+    );
+  }
+
+  return (
+  <div className="p-0 md:p-2">
+    <main>
+      <Header />
+      <CaseStudyDetailContent slug={slug} data={data} />
+  
+    </main>
+        <DarkFooter />
+  </div>
+  )
+}

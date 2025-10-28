@@ -1,42 +1,11 @@
 "use client"
 import RainbowSection from "./RainbowSection";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function DarkFooter() {
   const footerRef = useRef<HTMLDivElement | null>(null);
-  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
   const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-
-      scrollTimeout.current = setTimeout(() => {
-        if (!footerRef.current) return;
-
-        const rect = footerRef.current.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-
-        // Check if user is within footer+rainbow section
-        const isInView =
-          rect.top < viewportHeight && rect.bottom > 0;
-
-        if (isInView) {
-          const footerTop = rect.top + window.scrollY;
-
-          // Snap back smoothly
-          window.scrollTo({
-            top: footerTop,
-            behavior: "smooth",
-          });
-        }
-      }, 500); // 200ms after scroll stops
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const menuItems = {
     Menu: ["Solutions", "Resources", "Use Case", "About Us"],

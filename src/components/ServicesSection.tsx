@@ -350,7 +350,7 @@ export default function ServicesSection() {
         <div className="grid grid-cols-12 gap-6">
 
           {/* Industrial-Grade User Experience Card - Row 1 */}
-          <div className="col-span-7 bg-[#FFF8F5] hover:border-[#FF7847] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
+          <div className="col-span-7 bg-[#FFF8F5] hover:border-[#FF7847] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
             <div className="flex flex-col h-full justify-end relative z-10">
               <div className="relative z-20 flex flex-col gap-[8px]">
                 <h3 className="text-[#FF7847] text-[40px] leading-[1.2] tracking-[-0.02em] font-light whitespace-pre-line max-w-[60%]">
@@ -373,7 +373,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Swift AI Collaboration Card - Row 1 */}
-          <div className="col-span-5 bg-[#F5F9FF] hover:border-[#47B0FF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
+          <div className="col-span-5 bg-[#F5F9FF] hover:border-[#47B0FF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
             <div className="flex flex-col h-full justify-end relative z-10">
               <div className="relative z-20 flex flex-col gap-[8px]">
                 <h3 className="text-[#47B0FF] text-[40px] leading-[1.2] tracking-[-0.02em] font-light whitespace-pre-line max-w-[60%]">
@@ -396,7 +396,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Full-Stack AI Partner Card - Row 2 */}
-          <div className="col-span-5 bg-[#F5F8FF] hover:border-[#476CFF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[352px] relative overflow-hidden">
+          <div className="col-span-5 bg-[#F5F8FF] hover:border-[#476CFF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[352px] relative overflow-hidden">
             <div className="flex flex-col h-full justify-end relative z-10">
               <div className="relative z-20 flex flex-col gap-[8px] ">
                 <h3 className="text-[#476CFF] text-[40px] leading-[1.2] tracking-[-0.02em] font-light whitespace-pre-line max-w-[60%]">
@@ -419,7 +419,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Secure by Design Card - Row 2 */}
-          <div className="col-span-7 bg-[#F5FFF5] hover:border-[#47C466] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[352px] relative overflow-hidden">
+          <div className="col-span-7 bg-[#F5FFF5] hover:border-[#47C466] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[352px] relative overflow-hidden">
             <div className="flex flex-col h-full justify-end relative z-10">
               <div className="relative z-20 flex flex-col gap-[8px]">
                 <h3 className="text-[#47C466] text-[40px] leading-[1.2] tracking-[-0.02em] font-light whitespace-pre-line max-w-[60%]">
@@ -442,7 +442,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Verticalized AI Innovation Card - Row 3 */}
-          <div className="col-span-8 bg-[#FFF5FF] hover:border-[#B347FF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
+          <div className="col-span-8 bg-[#FFF5FF] hover:border-[#B347FF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent h-[276px] relative overflow-hidden">
             <div className="flex flex-col h-full relative z-10">
               <div className="relative z-20 flex flex-col gap-[8px] mt-auto">
                 <h3 className="text-[#B347FF] text-[40px] leading-[1.2] tracking-[-0.02em] font-light whitespace-pre-line max-w-[60%]">
@@ -467,7 +467,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Explore All Services Card - Row 3 */}
-          <div className="col-span-4 bg-[#F5F9FF] hover:bg-[#F5F0FF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:shadow-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] h-[276px] relative overflow-hidden">
+          <div className="col-span-4 bg-[#F5F9FF] hover:bg-[#F5F0FF] rounded-[2rem] p-12 group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] h-[276px] relative overflow-hidden">
             <div className="flex flex-col h-full relative z-10">
               {/* First Star - Top Right */}
               <div className="absolute top-2 right-2 w-16 h-16 transition-all duration-700 group-hover:scale-110 group-hover:rotate-12">

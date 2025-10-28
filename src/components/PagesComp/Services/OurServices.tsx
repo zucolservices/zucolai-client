@@ -35,31 +35,39 @@ const OurServices = () => {
                 "real-world problems."
             ];
 
+            // Match GetInTouchSection pacing
+            const perWordDelay = 120; // ms between words
+            const lineGap = 200; // pause between lines
+
             let globalWordIndex = 0;
+            let cumulativeDelay = 0;
 
             lines.forEach((line) => {
                 const wordsInLine = line.split(" ");
+                const lineStartDelay = cumulativeDelay;
 
                 wordsInLine.forEach((_, wordIndexInLine) => {
                     const currentWordIndex = globalWordIndex;
                     setTimeout(() => {
                         setAnimatedWords(prev => new Set([...prev, currentWordIndex]));
-                    }, wordIndexInLine * 80);
+                    }, lineStartDelay + wordIndexInLine * perWordDelay);
                     globalWordIndex++;
                 });
+
+                cumulativeDelay += wordsInLine.length * perWordDelay + lineGap;
             });
         }
     }, [isInView]);
 
     const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {
-        return text.split("  ").map((word, i) => {
+        return text.split(" ").map((word, i) => {
             const wordIndex = startIndex + i;
             const isAnimated = animatedWords.has(wordIndex);
 
             return (
                 <span
                     key={wordIndex}
-                    className={`inline-block transition-colors duration-300 ${isAnimated ? "text-black" : "text-gray-300"
+                    className={`inline transition-colors duration-500 ${isAnimated ? "text-black" : "text-gray-300"
                         }`}
                 >
                     {word}{" "}
@@ -88,9 +96,9 @@ const OurServices = () => {
             <div className="w-full border-b border-[#00000040]/25 hidden md:block"></div>
             <div className="flex justify-end w-full" ref={sectionRef}>
                 <div className="max-w-xl p-4 text-left text-[#00000066]/40 text-[32px] leading-[40px]">
-                    {renderAnimatedText("From blueprint to breakthrough,")}
-                    {renderAnimatedText("explore how our most in-demand All", 0)}
-                    {renderAnimatedText("capabilities are built to solve complex,", 8)}
+                    {renderAnimatedText("From blueprint to breakthrough,", 0)}
+                    {renderAnimatedText("explore how our most in-demand All", 4)}
+                    {renderAnimatedText("capabilities are built to solve complex,", 10)}
                     {renderAnimatedText("real-world problems.", 16)}
                 </div>
             </div>

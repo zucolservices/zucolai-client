@@ -1,4 +1,5 @@
 import HeadingPurple from "./HeadingPurple";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -11,11 +12,11 @@ export default function HeroSection() {
         muted
         playsInline
       />
-
-      <div className="relative z-10 w-full px-6 md:px-16 lg:px-16 max-w-[80rem] mx-auto pb-30 md:pb-60 lg:pb-0 lg:pt-32">
+<Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="object-cover" />
+      <div className="relative z-10 w-full px-6 md:px-16 lg:px-16 max-w-[80rem] mx-auto pb-30 md:pb-[8px] lg:pb-0 lg:pt-32">
         <HeadingPurple title="[Transforming AI Services]" />
 
-        <h1 className="text-[32px] md:text-[32px] lg:text-[40px] font-light font-[300] leading-[40px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-4 md:mb-6 tracking-[-0.02em] max-w-4xl font-['Inter Display']">
+        <h1 className="text-[32px] md:text-[32px] lg:text-[40px] font-light font-[300] leading-[40px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-4 md:mb-[8px] tracking-[-0.02em] max-w-4xl font-['Inter Display']">
           Build for Impact. Designed for Adoption.
           <br className="hidden md:block" />
           <span className="font-light opacity-90">

@@ -30,8 +30,8 @@ export default function TrustedCompanies() {
           <div className="absolute right-0 top-0 w-[100px] h-full z-10 bg-gradient-to-l from-[#FAFAFA] to-transparent" />
 
           <motion.div
-            initial={{ x: 0 }}
-            animate={{ x: ["-100%", "0%"] }}
+            initial={{ x: "100%" }}
+            animate={{ x: ["0%", "-100%"] }}
             transition={{
               duration: 20,
               repeat: Infinity,

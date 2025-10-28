@@ -35,31 +35,39 @@ const PowerSection = () => {
                 "faster and deliver smarter solutions."
             ];
 
+            // Match GetInTouchSection pacing
+            const perWordDelay = 120; // ms between words
+            const lineGap = 200; // pause between lines
+
             let globalWordIndex = 0;
+            let cumulativeDelay = 0;
 
             lines.forEach((line) => {
                 const wordsInLine = line.split(" ");
+                const lineStartDelay = cumulativeDelay;
 
                 wordsInLine.forEach((_, wordIndexInLine) => {
                     const currentWordIndex = globalWordIndex;
                     setTimeout(() => {
                         setAnimatedWords(prev => new Set([...prev, currentWordIndex]));
-                    }, wordIndexInLine * 80);
+                    }, lineStartDelay + wordIndexInLine * perWordDelay);
                     globalWordIndex++;
                 });
+
+                cumulativeDelay += wordsInLine.length * perWordDelay + lineGap;
             });
         }
     }, [isInView]);
 
     const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {
-        return text.split("  ").map((word, i) => {
+        return text.split(" ").map((word, i) => {
             const wordIndex = startIndex + i;
             const isAnimated = animatedWords.has(wordIndex);
 
             return (
                 <span
                     key={wordIndex}
-                    className={`inline-block transition-colors duration-300 ${isAnimated ? "text-black" : "text-gray-300"
+                    className={`inline transition-colors duration-500 ${isAnimated ? "text-black" : "text-gray-300"
                         }`}
                 >
                     {word}{" "}
@@ -90,10 +98,10 @@ const PowerSection = () => {
                 </p>
                 <div className=" " ref={sectionRef}>
                     <div className="max-w-xl text-left text-[#00000066]/40 text-[32px] leading-[40px]">
-                        {renderAnimatedText("Generative AI reshapes how businesses ",)}
-                        {renderAnimatedText("create and innovate. It produces text,", 0)}
-                        {renderAnimatedText("images, and videos, helping you move", 8)}
-                        {renderAnimatedText("faster and deliver smarter solutions.", 16)}
+                        {renderAnimatedText("Generative AI reshapes how businesses", 0)}
+                        {renderAnimatedText("create and innovate. It produces text,", 5)}
+                        {renderAnimatedText("images, and videos, helping you move", 11)}
+                        {renderAnimatedText("faster and deliver smarter solutions.", 17)}
                     </div>
                 </div>
             </div>

@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const AnimatedLogo = () => {
+  const pathname = usePathname();
+  const isCaseStudy = pathname?.startsWith("/use-cases/") || pathname === "/use-cases";
+  const zucolWordmark = isCaseStudy ? "/logos/zucol-dark.svg" : "/logos/zucol.svg";
+  const aiMark = isCaseStudy ? "/logos/ai-dark.svg" :"/logos/ai.svg"
+  const logoMark = isCaseStudy ? "/logos/logo-dark.svg": "/logos/logoo.svg"
   return (
     <motion.div
       className="flex items-center gap-3 cursor-pointer"
@@ -16,7 +22,7 @@ const AnimatedLogo = () => {
     >
       <Link href="/">
         <Image
-          src="/logos/logoo.svg"
+          src={logoMark}
           alt="Zucol.ai"
           width={39.739437103271484}
           height={40}
@@ -32,7 +38,7 @@ const AnimatedLogo = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           <Image
-            src="/logos/zucol.svg"
+            src={zucolWordmark}
             alt="Zucol.ai"
             width={75.36}
             height={18.44}
@@ -47,7 +53,7 @@ const AnimatedLogo = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           <Image
-            src="/logos/ai.svg"
+            src={aiMark}
             alt="Zucol.ai"
             width={33.8}
             height={20}

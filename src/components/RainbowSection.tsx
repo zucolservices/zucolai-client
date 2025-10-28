@@ -1,77 +1,14 @@
 "use client";
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
 
 export default function RainbowSection() {
-  // Ref for desktop version
-  const desktopContainerRef = useRef(null);
-
-  // Ref for tablet version
-  const tabletContainerRef = useRef(null);
-
-  // Ref for mobile version
-  const mobileContainerRef = useRef(null);
-
-  // Scroll animations for desktop
-  const { scrollYProgress: desktopScrollYProgress } = useScroll({
-    target: desktopContainerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Scroll animations for tablet
-  const { scrollYProgress: tabletScrollYProgress } = useScroll({
-    target: tabletContainerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Scroll animations for mobile
-  const { scrollYProgress: mobileScrollYProgress } = useScroll({
-    target: mobileContainerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Desktop animations (keep original)
-  const desktopScaleY = useTransform(
-    desktopScrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [0.1, 0.8, 2.0, 3.0]
-  );
-  const desktopOpacity = useTransform(
-    desktopScrollYProgress,
-    [0, 0.1, 0.9, 1],
-    [0, 1, 1, 0.3]
-  );
-
-  // Tablet animations (same as desktop)
-  const tabletScaleY = useTransform(
-    tabletScrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [0.1, 0.8, 2.0, 3.0]
-  );
-  const tabletOpacity = useTransform(
-    tabletScrollYProgress,
-    [0, 0.1, 0.9, 1],
-    [0, 1, 1, 0.3]
-  );
-
-  // Mobile animations (same as desktop)
-  const mobileScaleY = useTransform(
-    mobileScrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [0.1, 0.8, 2.0, 3.0]
-  );
-  const mobileOpacity = useTransform(
-    mobileScrollYProgress,
-    [0, 0.1, 0.9, 1],
-    [0, 1, 1, 0.3]
-  );
 
   return (
     <>
       {/* Desktop Version - Keep Original (768px and above) */}
       <div
-        ref={desktopContainerRef}
         className="relative w-full h-[500px] bg-black overflow-hidden hidden md:block"
+        style={{ overflowAnchor: 'none' }}
       >
         {/* Background noise with soft top border */}
         <div 
@@ -88,9 +25,9 @@ export default function RainbowSection() {
 
         {/* Rainbow background */}
         <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center bg-transparent">
-          <motion.div
+          <div
             className="origin-top w-full h-full relative"
-            style={{ scaleY: desktopScaleY, opacity: desktopOpacity }}
+            style={{ transform: 'scaleY(1)', opacity: 1, transformOrigin: 'top center' }}
           >
             {/* Background noise */}
             <div
@@ -109,7 +46,7 @@ export default function RainbowSection() {
               className="w-full h-full object-cover object-bottom block relative z-10"
               style={{ transformOrigin: "top center" }}
             />
-          </motion.div>
+          </div>
         </div>
 
         {/* Centered Logo + Text */}
@@ -131,17 +68,17 @@ export default function RainbowSection() {
 
       {/* Tablet Version (481px to 767px) */}
       <div
-        ref={tabletContainerRef}
         className="relative w-full h-[350px] bg-black overflow-hidden hidden sm:block md:hidden"
+        style={{ overflowAnchor: 'none' }}
       >
         {/* Footer image for tablet with animation */}
-        <motion.img
+        <img
           src="/images/footer_image_tab.png"
           alt="Background"
           className="absolute w-full h-full object-cover object-bottom z-10"
           style={{ 
-            scaleY: tabletScaleY,
-            opacity: tabletOpacity,
+            transform: 'scaleY(1)',
+            opacity: 1,
             transformOrigin: "bottom center",
             minHeight: '100%',
             width: '100%',
@@ -167,17 +104,17 @@ export default function RainbowSection() {
 
       {/* Mobile Version (480px and below) */}
       <div
-        ref={mobileContainerRef}
         className="relative w-full h-[350px] bg-black overflow-hidden block sm:hidden"
+        style={{ overflowAnchor: 'none' }}
       >
         {/* Footer image for mobile with animation */}
-        <motion.img
+        <img
           src="/images/footer_image_mobile.png"
           alt="Background"
           className="absolute w-full h-full object-cover object-bottom z-10"
           style={{ 
-            scaleY: mobileScaleY,
-            opacity: mobileOpacity,
+            transform: 'scaleY(1)',
+            opacity: 1,
             transformOrigin: "bottom center",
             minHeight: '100%',
             width: '100%',

@@ -109,31 +109,40 @@ export default function GetInTouchSection() {
         "We power great innovation across multiple industries."
       ];
 
+      // Slower, sequential animation settings
+      const perWordDelay = 120; // ms between words
+      const lineGap = 200; // extra pause between lines
+
       let globalWordIndex = 0;
+      let cumulativeDelay = 0;
 
       lines.forEach((line) => {
         const wordsInLine = line.split(" ");
+        const lineStartDelay = cumulativeDelay;
 
         wordsInLine.forEach((_, wordIndexInLine) => {
           const currentWordIndex = globalWordIndex;
           setTimeout(() => {
             console.log(`Animating word ${currentWordIndex}`); // Debug log
             setAnimatedWords(prev => new Set([...prev, currentWordIndex]));
-          }, wordIndexInLine * 80);
+          }, lineStartDelay + wordIndexInLine * perWordDelay);
           globalWordIndex++;
         });
+
+        cumulativeDelay += wordsInLine.length * perWordDelay + lineGap;
       });
     }
   }, [isInView]);
 
-  const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {    return text.split("  ").map((word, i) => {
+  const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {
+    return text.split(" ").map((word, i) => {
       const wordIndex = startIndex + i;
       const isAnimated = animatedWords.has(wordIndex);
 
       return (
         <span
           key={wordIndex}
-          className={`inline-block transition-colors duration-300 ${isAnimated ? "text-black" : "text-gray-300"
+          className={`inline transition-colors duration-500 ${isAnimated ? "text-black" : "text-gray-300"
             }`}
         >
           {word}{" "}
@@ -161,7 +170,7 @@ export default function GetInTouchSection() {
             {renderAnimatedText("Building AI tools to solve real problems.", 0)}
           </div>
           <div className="mb-2 md:mb-1">
-            {renderAnimatedText("Zucol.ai combines tech and business to deliver effective systems.", 8)}
+            {renderAnimatedText("Zucol.ai combines tech and business to deliver effective systems.", 7)}
           </div>
           <div>
             {renderAnimatedText("We power great innovation across multiple industries.", 16)}
@@ -176,7 +185,7 @@ export default function GetInTouchSection() {
           <button className="cursor-pointer rounded-[10px] py-[5px] px-[15px] text-[#000000] text-[16px] font-light leading-[28px]">
             Get in touch
           </button>
-        </div>         
+        </div>
       </div>
     </section>
   );

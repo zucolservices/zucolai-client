@@ -41,7 +41,7 @@ const TabsCards = () => {
                         <button
                             key={index}
                             onClick={() => setActiveTab(index)}
-                            className={`relative px-2 py-2 rounded-[16px] text-sm md:text-base text-[#000000] bg-[#FFFFFF] font-normal cursor-pointer transition-all duration-300 whitespace-nowrap ${activeTab === index ? "" : "border border-[#000000]/20"
+                            className={`relative px-4 py-2 rounded-[16px] text-[16px] text-[#000000] bg-[#FFFFFF] font-normal cursor-pointer transition-all duration-300 whitespace-nowrap ${activeTab === index ? "" : "border border-[#000000]/20"
                                 }`}
                             style={
                                 activeTab === index

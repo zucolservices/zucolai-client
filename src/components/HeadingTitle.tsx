@@ -4,7 +4,7 @@ import React from 'react'
 const HeadingTitle = ({ title, link }: { title: string, link: string }) => {
 
     const pathname = usePathname();
-    const blackText = (pathname === "/use-cases" || pathname.startsWith("/blog/"))
+    const blackText = (pathname.includes("/use-cases") || pathname.startsWith("/blog/") || pathname.startsWith("/services/case-studies/"))
 
     const textColor = blackText ? "text-[#0B0B0B]" : "text-[#FDFDFD]"
 

@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
-  const blackText = (pathname === "/use-cases" || pathname.startsWith("/blog/"))
+  const blackText = (pathname.includes("/use-cases") || pathname.startsWith("/blog/") || pathname.startsWith("/use-cases/"))
 
   const buttonColor = blackText ? "bg-[#000000]/15 text-[#000000]" : "bg-[#FFFFFF26] text-[#FFFFFF]"
 
