@@ -117,7 +117,7 @@ export default function CapabilitiesSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#BA8DFF]/0 to-transparent opacity-0 lg:group-hover:opacity-5 rounded-3xl transition-opacity duration-500" />
 
                 {/* Purple Glow/Shadow Below Card */}
-                <div className="absolute -bottom-24 left-1/4 transform -translate-x-1/4 w-56 h-16 bg-[#BA8DFF]/50 rounded-full blur-3xl opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+                <div className="absolute -bottom-24 left-1/4 transform -translate-x-1/4 w-56 h-16 bg-[#BA8DFF]/80 rounded-full blur-3xl opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 -z-10" />
 
                 {/* Wrapper: Mobile flex row, Desktop stacked */}
                 <div className="flex items-start gap-2 md:gap-3 lg:gap-4 lg:block md:items-start md:flex-col">

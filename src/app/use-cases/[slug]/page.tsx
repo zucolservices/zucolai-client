@@ -89,12 +89,8 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
   },
 };
 
-function slugify(input: string) {
-  return input.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
-
-export default function CaseStudyDetail({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function CaseStudyDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const data = CASE_STUDIES[slug];
 
   // Fallback: if unknown slug, show simple not found

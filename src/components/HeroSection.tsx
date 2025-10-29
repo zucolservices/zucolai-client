@@ -12,7 +12,7 @@ export default function HeroSection() {
         muted
         playsInline
       />
-<Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="object-cover" />
+      <Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="object-cover opacity-[55%]" />
       <div className="relative z-10 w-full px-6 md:px-16 lg:px-16 max-w-[80rem] mx-auto pb-30 md:pb-[8px] lg:pb-0 lg:pt-32">
         <HeadingPurple title="[Transforming AI Services]" />
 
@@ -32,10 +32,10 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-[8px]">
           <button className="bg-[#FFFFFF]/15 rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
-          Explore Solutions
+            Explore Solutions
           </button>
           <button className="rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
-          Join the Waitlist
+            Join the Waitlist
           </button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 
 "use client";
 import HeadingPurple from '@/components/HeadingPurple'
+import image from 'next/image';
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
@@ -9,53 +10,47 @@ const TeamSection = () => {
     const teamMembersDetails = [
         {
             id: 1,
-            name: "Name Here",
-            position: "Founder & CEO",
-            image: "/images/Frame 2147226918.png",
+            name: "Ankush Tambi",
+            position: "Chairman",
+            image: "/images/TeamPhotos/ankush-sir.png",
 
         },
         {
             id: 2,
-            name: "Name Here",
-            position: "UI Designer",
-            image: "/images/Frame 2147226918.png",
+            name: "Arpit Aeron",
+            position: "Vice-Chairman",
+            image: "/images/TeamPhotos/arpit_aeron.png",
 
         },
         {
             id: 3,
-            name: "Name Here",
-            position: "Developer",
-            image: "/images/Frame 2147226918.png",
+            name: "Siddharth Jhanwar",
+            position: "Director",
+            image: "/images/TeamPhotos/siddhu_sir.png",
 
         },
         {
             id: 4,
-            name: "Name Here",
-            position: "Developer",
-            image: "/images/Frame 2147226918.png",
+            name: "Akshat Gupta",
+            position: "Technology Advisor",
+            image: "/images/TeamPhotos/akshat-gupta.png",
 
         },
         {
             id: 5,
-            name: "Name Here",
-            position: "Developer",
-            image: "/images/Frame 2147226918.png",
+            name: "Arunank Sharan",
+            position: "Technology Advisor",
+            image: "/images/TeamPhotos/Arunank-sir.png",
 
         },
         {
             id: 6,
-            name: "Name Here",
-            position: "Developer",
-            image: "/images/Frame 2147226918.png",
+            name: "Bhaumik Jain",
+            position: "Strategic Advisor",
+            image: "/images/TeamPhotos/bhaumya_sir.png",
 
         },
-        {
-            id: 7,
-            name: "Name Here",
-            position: "Developer",
-            image: "/images/Frame 2147226918.png",
-
-        },
+  
     ]
 
 
@@ -131,17 +126,34 @@ const TeamSection = () => {
                     {renderAnimatedText("together deep tech and business understanding.", 8)}
                 </p>
             </div>
-            <div className='mt-24 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-4'>
+            <div className='mt-24 grid grid-cols-2 md:grid-cols-3 justify-center gap-4 max-w-3xl mx-auto'>
                 {teamMembersDetails?.map((member) => (
-                    <div key={member.id} className='relative'>
-                        <div className='w-full h-[345px]'>
-                            <Image src={member.image} alt={member.name} fill className='object-cover rounded-[14px]' />
-                        </div>
-                        <div className='absolute top-0 left-0 right-0 p-6'>
-                            <h2 className='text-[#FDFDFD] text-[24px] leading-[32px]'>{member.name}</h2>
-                            <p className='text-[#FDFDFD] text-[14px] leading-[20px]'>{member.position}</p>
-                        </div>
+                  <div
+                    key={member.id}
+                    id={member.id.toString()}
+                    className='group relative rounded-[14.5px] flex flex-col justify-between min-h-[314px] min-w-[228px] max-w-[228px] overflow-hidden'
+                    style={{
+                      background:
+                        'linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(180.06deg, #1C1F22 0.05%, #39516B 99.95%)'
+                    }}
+                  >
+                    {/* Hover gradient overlay */}
+                    <div
+                      className='pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100'
+                      style={{
+                        background:
+                          'linear-gradient(180.06deg, rgba(28,31,34,0.85) 0.05%, rgba(67,131,201,0.70) 99.95%)',
+                        willChange: 'opacity'
+                      }}
+                    />
+
+                    <div className='p-4 relative z-20 opacity-0 translate-y-2 transition duration-150 ease-out group-hover:opacity-100 group-hover:translate-y-0' style={{ willChange: 'opacity, transform' }}>
+                      <h2 className='text-[#FDFDFD] text-[24px] leading-[32px] font-light font-[300] m-0'>{member.name}</h2>
+                      <p className='text-[#FFFFFFCC] text-[14px] p-0 font-light font-[300] m-0'>{member.position}</p>
                     </div>
+
+                    <img src={member.image} alt={member.name} className='relative z-0 object-cover h-[249px] w-full grayscale transition duration-150 ease-out group-hover:grayscale-0' style={{ willChange: 'filter' }} />
+                  </div>
                 ))}
 
             </div>

@@ -41,10 +41,11 @@ export default function Header() {
         {/* --- Desktop Navigation --- */}
         <nav className="hidden lg:flex items-center gap-8 ml-auto">
           <HeadingTitle title="Services" link="/services" />
-          <HeadingTitle title="Resources" link="/resources" />
+          <HeadingTitle title="Resources/Blogs" link="/blog" />
           <HeadingTitle title="Use Cases" link="/use-cases" />
           <HeadingTitle title="About Us" link="/about-us" />
           <HeadingTitle title="Contact" link="/contact" />
+          
           <button className={`px-4 py-1 text-[16px] ${buttonColor} rounded-[8px] transition-colors`}>
             Get in touch
           </button>
