@@ -16,7 +16,7 @@ const companies = [
 export default function TrustedCompanies() {
 
   return (
-    <section className="py-16 px-6 md:px-16 lg:px-24 bg-[#FAFAFA]">
+    <section className="py-16 px-6 md:px-16 lg:px-24 bg-[#FFFFFF]">
       <div className="max-w-[70rem] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-[2.75rem] leading-[1.2] tracking-[-0.03em]">

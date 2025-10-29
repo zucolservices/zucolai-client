@@ -104,9 +104,11 @@ export default function GetInTouchSection() {
     if (isInView) {
       console.log("Starting animation!"); // Debug log
       const lines = [
-        "Building AI tools to solve real problems.",
-        "Zucol.ai combines tech and business to deliver effective systems.",
-        "We power great innovation across multiple industries."
+        "Building AI tools to solve real",
+        "problems. Zucol.ai combines tech and",
+        "business to deliver effective systems.",
+        "We power great innovation across",
+        "multiple industries."
       ];
 
       // Slower, sequential animation settings
@@ -167,13 +169,19 @@ export default function GetInTouchSection() {
       <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-left z-10 w-full" ref={sectionRef}>
         <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] lg:text-5xl leading-tight md:leading-snug">
           <div className="mb-2 md:mb-1">
-            {renderAnimatedText("Building AI tools to solve real problems.", 0)}
+            {renderAnimatedText("Building AI tools to solve real", 0)}
           </div>
           <div className="mb-2 md:mb-1">
-            {renderAnimatedText("Zucol.ai combines tech and business to deliver effective systems.", 7)}
+            {renderAnimatedText("problems. Zucol.ai combines tech and", 6)}
           </div>
-          <div>
-            {renderAnimatedText("We power great innovation across multiple industries.", 16)}
+          <div className="mb-2 md:mb-1">
+            {renderAnimatedText("business to deliver effective systems.", 12)}
+          </div>
+          <div className="mb-2 md:mb-1">
+            {renderAnimatedText("We power great innovation across", 17)}
+          </div>
+          <div className="mb-2 md:mb-1">
+            {renderAnimatedText("multiple industries.", 21)}
           </div>
         </h1>
 
