@@ -3,6 +3,7 @@ import DarkFooter from '@/components/DarkFooter';
 import React from 'react'
 import CasesHeroSection from '@/components/PagesComp/UseCases/CasesHeroSection';
 import SectionOne from '@/components/PagesComp/UseCases/SectionOne';
+import UseCasesList from '@/components/PagesComp/UseCases/UseCasesList';
 
 const page = () => {
 
@@ -11,8 +12,7 @@ const page = () => {
         <div className="p-0 md:p-2">
             <main>
                 <Header />
-                <CasesHeroSection />
-                <SectionOne />
+             <UseCasesList />
             </main>
             <DarkFooter />
         </div>

@@ -7,7 +7,7 @@ export default function ServicesHeroSection() {
      
       <Image src="/backgrounds/services-overlay.png" alt="Hero" fill className="object-cover mix-blend-hue" />
 
-      <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-30 md:pb-60 lg:pb-0 pt-32 lg:pt-32 lg:mt-[6%]">
+      <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-30 md:pb-60 lg:pb-0 pt-32 lg:pt-32 lg:mt-[8%]">
         <HeadingPurple title="[Transforming AI Services]" />
 
         <h1 className="  text-[32px] md:text-[32px] lg:text-[40px] font-light font-[300] leading-[40px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-4 md:mb-6 tracking-[-0.02em] max-w-4xl font-['Inter Display'] ">
@@ -20,7 +20,7 @@ export default function ServicesHeroSection() {
 
       </div>
  <video
-        className="absolute bottom-[-30%] left-[50%] translate-x-[-50%] w-full h-full  object-cover"
+        className="absolute bottom-[-30%] left-[50%] translate-x-[-50%] w-full h-[60%]  object-cover"
         src="/backgrounds/Service_page.mp4"
         autoPlay
         loop

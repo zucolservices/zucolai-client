@@ -58,7 +58,7 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
     subtitle: "Interactive AI-Based Lecture Generator",
     client: "Desklib",
     industry: "EdTech",
-    heroImage: "/images/use-cases/ai-learner.png", // replace with your actual image
+    heroImage: "/images/use-cases/2.png", // replace with your actual image
     backgroundImage: "/images/use-cases/ai-learner-bg.png", // replace with your actual asset
 
     background:
@@ -87,6 +87,40 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
     featuresList3: [],
     conclusion: "",
   },
+    "zoice-style-demo-use-cases": {
+    title: "Training WhatsApp Bot",
+    subtitle: "Chatbots & Virtual Assistants",
+    client: "Vridhi Home Finance",
+    industry: "Financial Services",
+    heroImage: "/images/use-cases/2.png", // replace with your actual image
+    backgroundImage: "/images/use-cases/training-bot-bg.png", // replace with your actual image
+
+    background:
+      "The client needed a scalable channel to provide training and gather customer scheme-related data.",
+
+    challenges: [
+      "Difficulty engaging customers consistently.",
+      "Manual data collection was slow.",
+    ],
+
+    solution:
+      "Created an AI chatbot integrated with WhatsApp that provides training material, answers scheme-related questions, and captures customer data in real time.",
+
+    results: [
+      "Faster and automated data collection.",
+      "Increased engagement via a familiar messaging platform.",
+    ],
+
+    featuresLead: "",
+    featuresPara1: "",
+    featuresList1: [],
+    featuresPara2: "",
+    featuresList2: [],
+    featuresPara3: "",
+    featuresList3: [],
+    conclusion: "",
+  },
+
 };
 
 export default async function CaseStudyDetail({ params }: { params: Promise<{ slug: string }> }) {

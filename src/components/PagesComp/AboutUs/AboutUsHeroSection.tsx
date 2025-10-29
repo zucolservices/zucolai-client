@@ -2,9 +2,9 @@ import HeadingPurple from "@/components/HeadingPurple";
 
 export default function AboutUsHeroSection() {
     return (
-        <section className="relative min-h-screen flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
+        <section className="relative min-h-screen lg:min-h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
             <video
-                className="absolute top-0 left-0 w-full h-full object-cover scale-[1.5] md:scale-125 lg:scale-100"
+                className="absolute top-0 right-0 w-full h-full object-cover "
                 src="/backgrounds/AboutUs.mp4"
                 autoPlay
                 loop
