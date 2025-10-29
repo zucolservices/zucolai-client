@@ -78,15 +78,15 @@ export default function DarkFooter() {
                   }}
                 />
               </div>
-              <button className="relative px-12 sm:px-14 md:px-22 py-6 sm:py-8 bg-transparent border-2 border-[#BA8DFF]/70 overflow-hidden transition-all duration-500 group-hover:border-[#BA8DFF] group-hover:shadow-[0_0_400px_40px_rgba(186,141,255,0.9)] group-hover:scale-105">
-                <span className="relative z-10 text-xl sm:text-2xl font-light text-[#BA8DFF] group-hover:text-white transition-colors duration-500">
+              <button className="relative  rounded-[8px] px-12 sm:px-14 md:px-[40px]  bg-transparent border-2 border-[#BA8DFF] overflow-hidden transition-all duration-500 group-hover:border-[#BA8DFF] group-hover:shadow-[0_0_400px_40px_rgba(186,141,255,0.9)] group-hover:scale-105  h-[96px]">
+                <span className="relative z-10 text-xl sm:text-[40px] font-light text-[#CEA8FF] group-hover:text-white transition-colors duration-500">
                   Let&apos;s Get Started
                 </span>
               </button>
               {/* Animated subtitle text */}
               <AnimatePresence>
                 <motion.div
-                  className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 pointer-events-none"
+                  className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 pointer-events-none"
                   initial={{ opacity: 0, y: 10, scale: 0.8 }}
                   animate={{
                     opacity: isHovered ? 1 : 0,

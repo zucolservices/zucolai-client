@@ -44,8 +44,8 @@ export default function Header() {
           <HeadingTitle title="Resources/Blogs" link="/blog" />
           <HeadingTitle title="Use Cases" link="/use-cases" />
           <HeadingTitle title="About Us" link="/about-us" />
-          <HeadingTitle title="Contact" link="/contact" />
-          
+          <HeadingTitle title="Contact" link="/contact-us" />
+
           <button className={`px-4 py-1 text-[16px] ${buttonColor} rounded-[8px] transition-colors`}>
             Get in touch
           </button>
