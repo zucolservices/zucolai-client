@@ -1,18 +1,64 @@
+"use client";
 import GradientsLeftRight from '@/components/GradientsLeftRight'
 import HeadingPurple from '@/components/HeadingPurple'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const ValuesGrid = () => {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [isInView, setIsInView] = useState(false);
+    const [animatedWords, setAnimatedWords] = useState(new Set<number>());
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setIsInView(true);
+            },
+            { threshold: 0.1 }
+        );
+        if (sectionRef.current) observer.observe(sectionRef.current);
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (!isInView) return;
+        const lines = [
+            "Trusted AI.",
+            "Real Impact.",
+        ];
+        let globalIndex = 0;
+        lines.forEach((line) => {
+            const words = line.split(" ");
+            words.forEach((_, i) => {
+                const idx = globalIndex;
+                setTimeout(() => {
+                    setAnimatedWords(prev => new Set([...prev, idx]));
+                }, i * 90);
+                globalIndex++;
+            });
+        });
+    }, [isInView]);
+
+    const renderAnimatedText = (text: string, startIndex: number = 0) => {
+        return text.split(" ").map((word, i) => {
+            const idx = startIndex + i;
+            const isOn = animatedWords.has(idx);
+            return (
+                <span key={idx} className={`inline-block mr-1 transition-colors duration-300 ${isOn ? 'text-black' : 'text-gray-300'}`}>{word}</span>
+            );
+        });
+    };
 
     return (
         <div className=" relative z-10 w-full">
             <GradientsLeftRight />
             <div className='relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-16 pt-16 lg:pt-16'>
-                <div className='hidden md:block'>
+                <div className='hidden md:block' ref={sectionRef}>
                     <HeadingPurple title="{ Our Values }" />
-                    <p className="max-w-2xl text-[#00000066]/40 text-[32px] leading-[40px]">
-                        Trusted AI.<br />Real Impact.
+                    <p style={{fontWeight:300}} className="max-w-2xl text-[40px] leading-[48px]">
+                        {renderAnimatedText("Trusted AI.", 0)}
+                        <br />
+                        {renderAnimatedText("Real Impact.", 2)}
                     </p>
                     <div className='mt-24'>
                         <div className="w-full flex gap-2">
