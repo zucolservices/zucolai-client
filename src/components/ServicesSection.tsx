@@ -383,7 +383,7 @@ export default function ServicesSection() {
                   Rapid iteration with{'\n'}AI-powered assistance.
                 </p>
               </div>
-              <div className="absolute top-[50%] -translate-y-1/2 right-[10px] w-[40%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
+              <div className="absolute top-[20%] -translate-y-1/2 right-[-20px] w-[55%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <Image
                   src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
@@ -406,7 +406,7 @@ export default function ServicesSection() {
                   End-to-end AI solutions{'\n'}from ideation to production.
                 </p>
               </div>
-              <div className="absolute top-[30%] -translate-y-1/2 right-[-20px] w-[50%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-12">
+              <div className="absolute top-[30%] -translate-y-1/2 right-[-20px] w-[70%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-12">
                 <Image
                   src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
