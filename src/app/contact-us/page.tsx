@@ -9,6 +9,7 @@ import PowerSection from '@/components/PagesComp/Services/PowerSection';
 import OfferProcess from '@/components/PagesComp/Services/OfferProcess';
 import CaseStudy from '@/components/PagesComp/Services/CaseStudy';
 import ContactHeroSection from '@/components/contact-us/ContactHeroSection';
+import ContactFormSection from '@/components/contact-us/FormSection';
 
 const page = () => {
 
@@ -18,11 +19,8 @@ const page = () => {
       <main>
         <Header />
         <ContactHeroSection />
-        <OurServices />
-        <TabsCards />
-        <PowerSection />
-        <OfferProcess />
-        <CaseStudy />
+      <ContactFormSection />
+       
       </main>
       <DarkFooter />
     </div>

@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
+    <section className="relative h-screen bg-black lg:h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover scale-[1.5] md:scale-125 lg:scale-100"
+        className="absolute top-0 right-0 w-[100%] h-full object-cover "
         src="/backgrounds/hero.mp4"
         autoPlay
         loop
