@@ -4,11 +4,9 @@ import React from 'react'
 const OfferProcess = () => {
     const RightIcons = () => {
         return (
-           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9985 22C13.9763 22 15.9097 21.4135 17.5542 20.3147C19.1987 19.2159 20.4805 17.6541 21.2373 15.8268C21.9942 13.9996 22.1922 11.9889 21.8064 10.0491C21.4205 8.10929 20.4681 6.32746 19.0696 4.92894C17.6711 3.53041 15.8892 2.578 13.9494 2.19215C12.0096 1.8063 9.99896 2.00433 8.1717 2.76121C6.34444 3.51809 4.78265 4.79981 3.68384 6.4443C2.58502 8.08879 1.99854 10.0222 1.99854 12C2.00619 14.6498 3.06221 17.1889 4.93592 19.0626C6.80963 20.9363 9.34872 21.9924 11.9985 22V22Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.75244 12.0019L10.5824 14.8319L16.2524 9.17188" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+            <svg width="8.5" height="5.66" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 4.00004L3.58 6.83004L9.25 1.17004" stroke="#00000099" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
 
         );
     };
@@ -44,26 +42,29 @@ const OfferProcess = () => {
                         [  Solutions We Provide  ]
                     </p>
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Offerings</span></div>
-                    <div className="bg-[#FFF5FF] rounded-[16px] p-6 relative overflow-hidden md:min-h-[220px] max-h-[220px]">
-                        <div className="md:flex justify-between items-center ">
-                            <div>
-                                {cardOneContent?.map((item, index) => (
-                                    <div className="my-4 flex items-start gap-3 flex-shrink-0" key={index}>
-                                        <div className="">
-                                            <RightIcons />
+                    <div className="bg-[#FFF5FF] rounded-[16px] p-6 relative overflow-hidden md:min-h-[220px]">
+                        <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative overflow-hidden'>
+                            <div className="flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
+                                <div>
+                                    {cardOneContent?.map((item, index) => (
+                                        <div className="my-4 flex items-start gap-3 flex-shrink-0" key={index}>
+                                            <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                                                <RightIcons />
+                                            </div>
+                                            <p style={{ fontWeight: 300 }} className="text-[16px] leading-[24px] font-normal  text-[#000000]">{item}</p>
                                         </div>
-                                        <p style={{fontWeight:300}}  className="text-[16px] leading-[24px] font-normal  text-[#000000]">{item}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="">
-                                <Image
-                                    src="/images/svgs/image 1.svg"
-                                    alt="Verticalized AI Innovation"
-                                    height={228}
-                                    width={228}
-                                    className=""
-                                />
+                                    ))}
+                                </div>
+
+                                <div className="aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12 group-hover:translate-y-4 w-32 md:w-auto">
+                                    <Image
+                                        src="/images/svgs/image 1.svg"
+                                        alt="Verticalized AI Innovation"
+                                        height={228}
+                                        width={228}
+                                        className=""
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -85,24 +86,26 @@ const OfferProcess = () => {
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Process</span>
                     </div>
                     <div className="bg-[#73BFFD26] rounded-[16px] p-6 relative overflow-hidden">
-                        <div className="md:flex justify-between items-center ">
-                            <div>
-                                {cardTwoContent?.map((item, index) => (
-                                    <div className="my-4 flex items-start gap-3 flex-shrink-0" key={index}>
-                                        <div className="">
-                                            <RightIcons  />
+                        <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative overflow-hidden'>
+                            <div className="flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
+                                <div>
+                                    {cardTwoContent?.map((item, index) => (
+                                        <div className="my-4 flex items-start gap-3 flex-shrink-0" key={index}>
+                                            <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                                                <RightIcons />
+                                            </div>
+                                            <p style={{ fontWeight: 300 }} className="text-[16px] leading-[24px]  text-[#000000]">{item}</p>
                                         </div>
-                                        <p style={{fontWeight:300}} className="text-[16px] leading-[24px]  text-[#000000]">{item}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="">
-                                <Image
-                                    src="/images/svgs/image2.svg"
-                                    alt="Verticalized AI Innovation"
-                                    height={259}
-                                    width={259}
-                                />
+                                    ))}
+                                </div>
+                                <div className="aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12 group-hover:-translate-y-4 w-32 md:w-auto">
+                                    <Image
+                                        src="/images/svgs/image2.svg"
+                                        alt="Verticalized AI Innovation"
+                                        height={259}
+                                        width={259}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>

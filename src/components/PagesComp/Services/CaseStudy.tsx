@@ -1,5 +1,5 @@
- import React from 'react'
- import Link from 'next/link'
+import React from 'react'
+import Link from 'next/link'
 
 const cardsContent = [
     {
@@ -61,9 +61,9 @@ const CaseStudy = () => {
                                     <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out">
                                         <Link
                                             href={`/use-cases/${toSlug(item.title)}`}
-                                            className="flex items-center justify-between border border-[#2A71FF] text-[#000] bg-white/70 backdrop-blur rounded-[12px] w-[160px] h-[44px] px-4 text-[16px]"
+                                            className="flex items-center justify-between border border-[#38A3F3] text-[#000] bg-[#FFFFFF] backdrop-blur rounded-[8px] w-[160px] h-[44px] px-4 text-[16px]"
                                         >
-                                            <span className="text-[16px]">Know More</span>
+                                            <span className="text-[#000000] font-light text-[16px]">Know More</span>
                                             <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                                         </Link>
                                     </div>
