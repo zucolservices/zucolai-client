@@ -187,10 +187,10 @@ export default function GetInTouchSection() {
 
         {/* Buttons with enhanced hover effects - responsive */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12">
-          <button className="cursor-pointer bg-[#000000] rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
+          <button onClick={() => window.location.href = "/about-us"} className="cursor-pointer bg-[#000000] rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
             About us
           </button>
-          <button className="cursor-pointer rounded-[10px] py-[5px] px-[15px] text-[#000000] text-[16px] font-light leading-[28px]">
+          <button onClick={() => window.location.href = "/contact-us"} className="cursor-pointer rounded-[10px] py-[5px] px-[15px] text-[#000000] text-[16px] font-light leading-[28px]">
             Get in touch
           </button>
         </div>

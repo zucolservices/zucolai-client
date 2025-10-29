@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen bg-gradient-to-b from-[#00191c] via-[#00191c] to-[#00191c] lg:h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
       <video
-        className="absolute object-cover rotate-[90deg] bg-red-900 mt-[1%]  right-[20%]  "
+        className="absolute object-cover  lg:rotate-[90deg] lg:mt-[1%]  lg:right-[20%]  "
         src="/backgrounds/hero.mp4"
         autoPlay
         loop
