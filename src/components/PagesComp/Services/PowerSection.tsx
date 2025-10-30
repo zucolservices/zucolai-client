@@ -82,7 +82,7 @@ const PowerSection = () => {
 
             <GradientsLeftRight />
 
-            <div className="w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-8 md:pb-32 pt-16 lg:pt-32">
+            <div className="w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-8 md:pb-32 pt-16 lg:pt-32 text-center">
                 <p
                     style={{
                         fontFamily: 'ChakraPetch, sans-serif',
@@ -92,12 +92,12 @@ const PowerSection = () => {
                         lineHeight: '24px',
                         color: '#BA8DFF',
                     }}
-                    className="tracking-wide mb-2 md:mb-4 "
+                    className="tracking-wide mb-2 md:mb-4 max-w-xl mx-auto text-left"
                 >
                     [ Power of Conversational AI ]
                 </p>
                 <div className=" " ref={sectionRef}>
-                    <div className="max-w-xl text-left text-[#00000066]/40 text-[32px] leading-[40px]">
+                    <div className="max-w-xl mx-auto text-left text-[#00000066]/40 text-[32px] leading-[40px]">
                         {renderAnimatedText("Generative AI reshapes how businesses", 0)}
                         {renderAnimatedText("create and innovate. It produces text,", 5)}
                         {renderAnimatedText("images, and videos, helping you move", 11)}

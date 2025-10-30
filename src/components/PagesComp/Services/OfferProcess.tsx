@@ -42,8 +42,8 @@ const OfferProcess = () => {
                         [  Solutions We Provide  ]
                     </p>
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Offerings</span></div>
-                    <div className="bg-[#FFF5FF] rounded-[16px] p-6 relative overflow-hidden md:min-h-[220px]">
-                        <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative overflow-hidden'>
+                    <div className="bg-[#FFF5FF] rounded-[16px] p-6 relative md:min-h-[220px]">
+                        <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative'>
                             <div className="flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
                                 <div>
                                     {cardOneContent?.map((item, index) => (
@@ -85,8 +85,8 @@ const OfferProcess = () => {
                     </p>
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Process</span>
                     </div>
-                    <div className="bg-[#73BFFD26] rounded-[16px] p-6 relative overflow-hidden">
-                        <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative overflow-hidden'>
+                    <div className="bg-[#73BFFD26] rounded-[16px] p-6 relative">
+                        <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative'>
                             <div className="flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
                                 <div>
                                     {cardTwoContent?.map((item, index) => (
