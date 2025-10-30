@@ -14,7 +14,7 @@ export default function DarkFooter() {
 
   return (
     <div className="relative" ref={footerRef}>
-      <footer className="py-32 px-6 md:px-16 lg:px-24 pb-0 text-white bg-black relative overflow-hidden rounded-t-[2rem]">
+      <footer className="py-32 px-6 md:px-16 lg:px-24 pb-0 text-white bg-black relative overflow-hidden rounded-t-[16px]">
         {/* Background Gradients */}
         <div className="absolute top-0 -right-1/4 w-[800px] h-[800px] bg-gradient-to-br from-[#BA8DFF]/20 via-[#BA8DFF]/5 to-transparent rounded-full blur-3xl -z-10" />
         <div className="absolute -bottom-1/4 -left-1/4 w-[800px] h-[800px] bg-gradient-to-tr from-[#E5FFE8]/30 via-[#E5FFE8]/5 to-transparent rounded-full blur-3xl -z-10" />

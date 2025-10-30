@@ -1,13 +1,18 @@
 
 "use client";
 import HeadingPurple from '@/components/HeadingPurple'
-import image from 'next/image';
-import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-const TeamSection = () => {
+type TeamMember = {
+    id: number;
+    name: string;
+    position: string;
+    image: string;
+};
 
-    const teamMembersDetails = [
+const TeamSection: React.FC = () => {
+
+    const teamMembersDetails: TeamMember[] = [
         {
             id: 1,
             name: "Ankush Tambi",
@@ -57,6 +62,8 @@ const TeamSection = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [isInView, setIsInView] = useState(false);
     const [animatedWords, setAnimatedWords] = useState(new Set<number>());
+    const infoRef = useRef<HTMLDivElement>(null);
+    const [infoInView, setInfoInView] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -76,13 +83,13 @@ const TeamSection = () => {
     }, []);
 
     useEffect(() => {
-        if (isInView) {
-            const lines = [
-                "We don't just build AI tools we design",
-                "them to solve real problems at scale.",
-                "Zucol AI brings together deep tech",
-                "and business understanding.",
-            ];
+        if (!isInView) return;
+        const lines = [
+            "We don't just build AI tools we design",
+            "them to solve real problems at scale.",
+            "Zucol AI brings together deep tech",
+            "and business understanding.",
+        ];
 
             let globalWordIndex = 0;
 
@@ -97,8 +104,18 @@ const TeamSection = () => {
                     globalWordIndex++;
                 });
             });
-        }
     }, [isInView]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setInfoInView(true);
+            },
+            { threshold: 0.2 }
+        );
+        if (infoRef.current) observer.observe(infoRef.current);
+        return () => observer.disconnect();
+    }, []);
 
     const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {
         return text.split(" ").map((word, i) => {
@@ -131,12 +148,26 @@ const TeamSection = () => {
                     {renderAnimatedText("and business understanding.", 21)}
                 </p>
             </div>
-            <div className='mt-24 grid grid-cols-2 md:grid-cols-3 justify-center gap-4 max-w-3xl mx-auto'>
-                {teamMembersDetails?.map((member) => (
+            <div ref={infoRef} className={`mt-10 grid grid-cols-1 md:grid-cols-3 gap-8`}>
+                <div className={`transition-all duration-500 lg:duration-700 ${infoInView ? 'lg:opacity-100 lg:translate-y-0' : 'lg:opacity-0 lg:translate-y-2'}`}>
+                    <h3 style={{fontWeight:300}} className='text-[#0B0B0B] text-[18px] md:text-[40px] '>Who We Are:</h3>
+                    <p className='text-[#0B0B0B] text-[14px] leading-[24px] md:text-[16px] font-light lg:max-w-[200px]'>A team of data scientists, engineers, and strategists with AI expertise.</p>
+                </div>
+                <div className={`transition-all duration-500 lg:duration-700 delay-100 ${infoInView ? 'lg:opacity-100 lg:translate-y-0' : 'lg:opacity-0 lg:translate-y-2'}`}>
+                    <h3 style={{fontWeight:300}} className='text-[#0B0B0B] text-[18px] md:text-[40px] '>How We Work:</h3>
+                    <p className='text-[#0B0B0B] text-[14px] leading-[24px] md:text-[16px] font-light lg:max-w-[200px]'>Collaborative, research-driven, and focused on measurable outcomes.</p>
+                </div>
+                <div className={`transition-all duration-500 lg:duration-700 delay-200 ${infoInView ? 'lg:opacity-100 lg:translate-y-0' : 'lg:opacity-0 lg:translate-y-2'}`}>
+                    <h3 style={{fontWeight:300}} className='text-[#0B0B0B] text-[18px] md:text-[40px] '>Setting Us Apart:</h3>
+                    <p className='text-[#0B0B0B] text-[14px] leading-[24px] md:text-[16px] font-light lg:max-w-[200px]'>Industry knowledge + cutting-edge AI R&D + customer-first approach.</p>
+                </div>
+            </div>
+            <div className='mt-24 grid grid-cols-1 md:grid-cols-3 justify-center gap-4 lg:max-w-6xl mx-auto'>
+                {teamMembersDetails?.map((member: TeamMember) => (
                   <div
                     key={member.id}
                     id={member.id.toString()}
-                    className='group relative rounded-[14.5px] flex flex-col justify-between min-h-[314px] min-w-[228px] max-w-[228px] overflow-hidden'
+                    className='group relative   rounded-[14.5px] flex flex-col justify-between min-h-[370px] min-w-[228px] min-w-[300px] overflow-hidden'
                     style={{
                       background:
                         'linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(180.06deg, #1C1F22 0.05%, #39516B 99.95%)'
@@ -144,7 +175,7 @@ const TeamSection = () => {
                   >
                     {/* Hover gradient overlay */}
                     <div
-                      className='pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100'
+                      className='pointer-events-none absolute inset-0 z-0 opacity-100 md:opacity-0 transition-opacity duration-150 ease-out md:group-hover:opacity-100'
                       style={{
                         background:
                           'linear-gradient(180.06deg, rgba(28,31,34,0.85) 0.05%, rgba(67,131,201,0.70) 99.95%)',
@@ -152,12 +183,12 @@ const TeamSection = () => {
                       }}
                     />
 
-                    <div className='p-4 relative z-20 opacity-0 translate-y-2 transition duration-150 ease-out group-hover:opacity-100 group-hover:translate-y-0' style={{ willChange: 'opacity, transform' }}>
+                    <div className='p-4 relative z-20 opacity-100 md:opacity-0 translate-y-0 md:translate-y-2 transition duration-150 ease-out md:group-hover:opacity-100 md:group-hover:translate-y-0' style={{ willChange: 'opacity, transform' }}>
                       <h2 className='text-[#FDFDFD] text-[24px] leading-[32px] font-light font-[300] m-0'>{member.name}</h2>
                       <p className='text-[#FFFFFFCC] text-[14px] p-0 font-light font-[300] m-0'>{member.position}</p>
                     </div>
 
-                    <img src={member.image} alt={member.name} className='relative z-0 object-cover h-[249px] w-full grayscale transition duration-150 ease-out group-hover:grayscale-0' style={{ willChange: 'filter' }} />
+                    <img src={member.image} alt={member.name} className='relative z-0 object-cover h-[299px] w-full grayscale-0 md:grayscale transition duration-150 ease-out md:group-hover:grayscale-0' style={{ willChange: 'filter' }} />
                   </div>
                 ))}
 

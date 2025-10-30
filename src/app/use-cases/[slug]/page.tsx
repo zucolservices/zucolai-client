@@ -30,30 +30,26 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
     ],
     featuresLead: "Turpis ultrices imperdiet in id. Diam dui purus blandit urna.",
     featuresPara1:
-      "1. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus.",
-    featuresList1: [
+"",    featuresList1: [
       "High volume of repetitive queries about loan information.",
       "Manual agents struggled to respond quickly and accurately.",
       "Lack of multilingual",
     ],
-    featuresPara2:
-      "2. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus.",
+    featuresPara2:"",
     featuresList2: [
       "High volume of repetitive queries about loan information.",
       "Manual agents struggled to respond quickly and accurately.",
       "Lack of multilingual",
     ],
-    featuresPara3:
-      "3. Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus.",
+    featuresPara3:"",
     featuresList3: [
       "High volume of repetitive queries about loan information.",
       "Manual agents struggled to respond quickly and accurately.",
       "Lack of multilingual",
     ],
-    conclusion:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus donec libero enim et viverra sed quam at tincidunt. Sit amet mi ornare blandit cursus. Turpis ultrices imperdiet in id. Diam dui purus blandit urna felis. Dis ultrices volutpat tellus vulputate eu eget tortor faucibus aliquet.",
+    conclusion:""
   },
-   "ai-learner-desklib": {
+  "ai-learner-desklib": {
     title: "AI Learner",
     subtitle: "Interactive AI-Based Lecture Generator",
     client: "Desklib",
@@ -65,12 +61,18 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
       "Desklib wanted to enhance its learning platform by enabling interactive lectures based on uploaded study material.",
 
     challenges: [
-      "Students required personalized learning support.",
-      "Manual lecture delivery was not scalable.",
+      "A single, user-friendly platform was needed for both students and educators.",
+      "The platform should allow easy access to academic materials.",
+      "The platform needed to evaluate assignments using AI.",
+      "It should provide meaningful and helpful feedback.",
+      "The system had to support multiple languages.",
+      "It needed to handle large numbers of users without slowing down.",
+      "The platform should promote ethical academic practices.",
+      "It must detect and prevent plagiarism effectively.",
     ],
 
     solution:
-      "Developed an AI Learner bot that generates and delivers lectures automatically from uploaded content, making study material more engaging and interactive.",
+      "AI-powered tools for paraphrasing, plagiarism detection, and content summarization. Extensive document library with academic resources for students and educators. Scalable, fast, and user-friendly platform that performs well across all devices.",
 
     results: [
       "Improved learning engagement.",

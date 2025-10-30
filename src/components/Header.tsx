@@ -86,7 +86,7 @@ export default function Header() {
             {/* <HeadingTitle title="Resources" link="/resources" /> */}
             <HeadingTitle title="Use Cases" link="/use-cases" />
             <HeadingTitle title="About Us" link="/about-us" />
-            <HeadingTitle title="Contact" link="/contact" />
+            <HeadingTitle title="Contact" link="/contact-us" />
             <button onClick={() => { setIsContactOpen(true); setIsMenuOpen(false); }} className="px-4 py-2 text-sm text-white bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors">
               Get in touch
             </button>
