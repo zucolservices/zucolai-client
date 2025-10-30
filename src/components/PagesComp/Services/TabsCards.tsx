@@ -104,7 +104,7 @@ const TabsCards = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="mt-[60px] flex flex-col md:flex-row gap-[60px] items-center">
+            <div key={activeTab} className="mt-[60px] flex flex-col md:flex-row gap-[60px] items-start md:min-h-[400px] animate-fadeIn">
                 <div className="">
                     <Image
                         alt=""
