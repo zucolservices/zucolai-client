@@ -167,7 +167,7 @@ const TeamSection: React.FC = () => {
                   <div
                     key={member.id}
                     id={member.id.toString()}
-                    className='group relative   rounded-[14.5px] flex flex-col justify-between min-h-[370px] min-w-[228px] min-w-[300px] overflow-hidden'
+                    className='group relative   rounded-[14.5px] flex flex-col justify-between h-[400px] min-w-[228px] min-w-[300px] overflow-hidden'
                     style={{
                       background:
                         'linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(180.06deg, #1C1F22 0.05%, #39516B 99.95%)'
@@ -188,7 +188,7 @@ const TeamSection: React.FC = () => {
                       <p className='text-[#FFFFFFCC] text-[14px] p-0 font-light font-[300] m-0'>{member.position}</p>
                     </div>
 
-                    <img src={member.image} alt={member.name} className='relative z-0 object-cover h-[299px] w-full grayscale-0 md:grayscale transition duration-150 ease-out md:group-hover:grayscale-0' style={{ willChange: 'filter' }} />
+                    <img src={member.image} alt={member.name} className='relative z-0 object-cover min-h-[320px] w-full grayscale-0 md:grayscale transition duration-150 ease-out md:group-hover:grayscale-0' style={{ willChange: 'filter' }} />
                   </div>
                 ))}
 

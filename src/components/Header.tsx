@@ -9,6 +9,8 @@ import HeadingPurple from "@/components/HeadingPurple";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<null | { ok: boolean; message: string }>(null);
 
   const pathname = usePathname();
   const blackText = (pathname.includes("/use-cases") || pathname.startsWith("/blog/") || pathname.startsWith("/use-cases/"))
@@ -24,6 +26,40 @@ export default function Header() {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (submitting) return;
+    setStatus(null);
+    setSubmitting(true);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      full_name: String(formData.get('name') || ''),
+      email: String(formData.get('email') || ''),
+      phone: String(formData.get('phone') || ''),
+      company: String(formData.get('company') || ''),
+      job_title: String(formData.get('title') || ''),
+      message: String(formData.get('message') || ''),
+    };
+    try {
+      const res = await fetch('https://app.parmartham.org.in/api/send-mail/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || 'Failed to submit');
+      }
+      setStatus({ ok: true, message: "Thanks! We'll get back to you soon." });
+      form.reset();
+    } catch (err: any) {
+      setStatus({ ok: false, message: err?.message || 'Something went wrong.' });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 p-4">
@@ -114,20 +150,23 @@ export default function Header() {
                 <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-10 lg:px-[96px] lg:py-[92px]">
                     <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-light leading-[36px] sm:leading-[40px] lg:leading-[44px] text-[#0A0A0A] mb-6 tracking-[-0.02em] font-['Inter Display']">Get in touch</h2>
 
-                    <form className="space-y-4">
+                    <form className="space-y-4" onSubmit={handleSubmit}>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Full Name" className="h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
-                            <input type="email" placeholder="Email Address" className="h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
+                            <input name="name" required type="text" placeholder="Full Name" className="h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
+                            <input name="email" required type="email" placeholder="Email Address" className="h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
                         </div>
-                        <input type="tel" placeholder="Phone Number" className="w-full h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
-                        <input type="text" placeholder="Company / Organization" className="w-full h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
-                        <input type="text" placeholder="Job Title" className="w-full h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
-                        <textarea placeholder="Message / Project Brief" rows={4} className="w-full rounded-[8px] border border-[#E0E0E0] px-4 py-3 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40 resize-none" />
+                        <input name="phone" type="tel" placeholder="Phone Number" className="w-full h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
+                        <input name="company" type="text" placeholder="Company / Organization" className="w-full h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
+                        <input name="title" type="text" placeholder="Job Title" className="w-full h-12 rounded-[8px] border border-[#E0E0E0] px-4 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40" />
+                        <textarea name="message" required placeholder="Message / Project Brief" rows={4} className="w-full rounded-[8px] border border-[#E0E0E0] px-4 py-3 text-[#0A0A0A] placeholder:text-[#999999] outline-none focus:border-black/40 resize-none" />
 
-                        <button type="submit" className="mt-2 inline-flex items-center gap-2 bg-black text-white px-5 h-10 rounded-[8px] hover:bg-black/90 transition">
-                            Submit
+                        <button disabled={submitting} type="submit" className="mt-2 inline-flex items-center gap-2 bg-black text-white px-5 h-10 rounded-[8px] hover:bg-black/90 transition disabled:opacity-60 disabled:cursor-not-allowed">
+                            {submitting ? 'Submitting...' : 'Submit'}
                             <span className="inline-block translate-x-0 group-hover:translate-x-0">→</span>
                         </button>
+                        {status && (
+                          <div className={`text-sm mt-1 ${status.ok ? 'text-green-600' : 'text-red-600'}`}>{status.message}</div>
+                        )}
                     </form>
                 </div>
 

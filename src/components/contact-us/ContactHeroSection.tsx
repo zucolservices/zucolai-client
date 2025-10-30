@@ -21,7 +21,7 @@ export default function ContactHeroSection() {
 
                     {/* RIGHT VISUAL AREA */}
                     <div className="relative w-full lg:w-[48%]  h-[80vh] lg:h-screen overflow-hidden">
-                                    <Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="absolute inset-0 w-full h-full  object-cover opacity-[55%]" />
+                        <Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="absolute inset-0 w-full h-full  object-cover opacity-[55%]" />
 
 
                         {/* GIF Background */}
@@ -36,11 +36,11 @@ export default function ContactHeroSection() {
                             src="/backgrounds/services-overlay.png"
                             alt="Overlay"
                             fill
-                            className="object-cover mix-blend-hue pointer-events-none opacity-[96%]"
+                            className="object-cover mix-blend-hue pointer-events-none opacity-[94%]"
                         />
 
                         {/* Edge gradient to blend seam between columns */}
-                        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-l from-transparent to-black/70" />
+                        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-l  from-transparent to-black/100" />
                     </div>
                 </div>
             </div>

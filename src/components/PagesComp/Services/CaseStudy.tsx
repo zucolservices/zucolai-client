@@ -6,6 +6,7 @@ const cardsContent = [
         title: "Loan Information Voice Agent (Vridhi Home Finance)",
         description: "AI bot that gathers information related to loan from interested leads.",
         imageUrl: "/images/image_001978369.jpg"
+        
     },
     {
         title: "AI Learner (Desklib)",

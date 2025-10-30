@@ -5,17 +5,17 @@ const cardsContent = [
     {
         title: "Loan Information Voice Agent (Vridhi Home Finance)",
         description: "AI bot that gathers information related to loan from interested leads.",
-        imageUrl: "/images/image_1001978369.png"
+        imageUrl: "/images/image_001978369.jpg"
     },
     {
         title: "AI Learner (Desklib)",
         description: "AI bot which provides lecture for uploaded study material.",
-        imageUrl: "/images/image_1001978368.png"
+        imageUrl: "/images/image_001978368.jpg"
     },
     {
         title: "Zoice-style demo use cases",
         description: "lead qualification, loan eligibility, appointment booking.  ",
-        imageUrl: "/images/image_1001978367.png"
+        imageUrl: "/images/image_001978367.jpg"
     },
 ];
 
@@ -49,13 +49,13 @@ const UseCasesList = () => {
                         {cardsContent?.map((item, index) => (
                             <div
                                 key={index}
-                                className="group relative rounded-[16px] p-6 border border-[#00000033]/60 overflow-hidden bg-white"
+                                    className="group relative rounded-[16px] p-6 border border-[#00000033]/60 overflow-hidden"
                                 style={{ height: '300px' }}
                             >
                                 {/* Hover background image layer */}
                                 <div
                                   className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-100 lg:opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100 z-0"
-                                  style={{ backgroundImage: `url(${item.imageUrl})` }}
+                                    style={{ backgroundImage: `url(${item.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '300px' }}
                                 />
                                 <div className="relative z-10 rounded-[12px] space-y-3">
                                     <p style={{ fontWeight: 300 }} className="md:text-[30px] text-[24px] leading-[1.2] font-normal text-[#000]">{item.title}</p>
