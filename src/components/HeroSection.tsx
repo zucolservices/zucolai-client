@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen bg-gradient-to-b from-[#00191c] via-[#00191c] to-[#00191c] lg:h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
       <video
-        className="absolute object-cover  lg:rotate-[90deg] lg:mt-[1%]  lg:right-[20%]  "
+        className="absolute object-cover  lg:rotate-[90deg] lg:mt-[1%] 2xl:mt-[8%]   lg:right-[10%]  "
         src="/backgrounds/hero.mp4"
         autoPlay
         loop
@@ -32,17 +32,17 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        <p className="font-light text-sm md:text-[16px] leading-relaxed tracking-[-0.01em] text-gray-300 opacity-70 mb-4 max-w-2xl">
+        <p className="font-light text-sm md:text-[16px] leading-relaxed tracking-[-0.01em] text-gray-300 opacity-70 mb-8 max-w-2xl">
           AI services from LLMs, RAG, predictive analytics, and secure deployments
         </p>
 
         <div className="flex flex-wrap gap-[8px]">
-          <button onClick={() => router.push('/services')}  className="bg-[#FFFFFF]/15 hover:bg-[#FFFFFF]/30 rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
+          <button onClick={() => router.push('/services')}  className="bg-[#FFFFFF]/15 cursor-pointer hover:bg-[#FFFFFF]/30 rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
             Explore Services
           </button>
-          <button className="rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
+          {/* <button className="rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
             Join the Waitlist
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

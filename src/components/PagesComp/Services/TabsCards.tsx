@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const tabsContent = [
     {
@@ -69,8 +69,18 @@ const RightIcons = () => {
 const TabsCards = () => {
     const [activeTab, setActiveTab] = useState(0);
     const activeContent = tabsContent[activeTab];
-    const isSmallScreen = window.innerWidth < 1100;
-    console.log(isSmallScreen)
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const update = () => {
+            if (typeof window !== 'undefined') {
+                setIsSmallScreen(window.innerWidth < 1100);
+            }
+        };
+        update();
+        window.addEventListener('resize', update);
+        return () => window.removeEventListener('resize', update);
+    }, []);
 
     return (
         <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto md:pb-16 pt-8">

@@ -137,7 +137,7 @@ const TeamSection: React.FC = () => {
     return (
         <div className=" relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-16 pt-16 lg:pt-16">
             <div ref={sectionRef}>
-                <HeadingPurple title="{ Our Team }" />
+                <HeadingPurple title="[ Our Team ]" />
                 <p style={{fontWeight:300}} className="max-w-2xl text-[#00000066]/40 text-[40px] leading-[48px]">
                     {renderAnimatedText("We don't just build AI tools we design", 0)}
                     <br />
