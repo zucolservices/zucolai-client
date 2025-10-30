@@ -109,6 +109,7 @@ export default function CapabilitiesSection() {
               <div
                 key={index}
                 className="
+                bg-[#FFFFFF0D] lg:bg-transparent
         group cursor-pointer p-4 md:p-6 lg:p-8 rounded-3xl relative  
         lg:opacity-25 lg:hover:opacity-100 lg:transition-opacity lg:duration-500
       "

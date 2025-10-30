@@ -78,7 +78,7 @@ export default function DarkFooter() {
                   }}
                 />
               </div>
-              <button className="relative  rounded-[8px] px-12 sm:px-14 md:px-[40px]  bg-transparent border-2 border-[#BA8DFF] overflow-hidden transition-all duration-500 group-hover:border-[#BA8DFF] group-hover:shadow-[0_0_100px_40px_rgba(186,141,255,0.9)] group-hover:scale-105  h-[90px]">
+              <button className="relative  rounded-[8px] px-12 sm:px-14 md:px-[40px]  bg-transparent border-2 border-[#BA8DFF] overflow-hidden transition-all duration-500 group-hover:border-[#BA8DFF] shadow-[0_0_100px_40px_rgba(186,141,255,0.9)] lg:group-hover:shadow-[0_0_100px_40px_rgba(186,141,255,0.9)] group-hover:scale-105  h-[90px]">
                 <span className="relative z-10 text-xl sm:text-[40px] font-light text-[#CEA8FF] group-hover:text-white transition-colors duration-500">
                   Let&apos;s Get Started
                 </span>
