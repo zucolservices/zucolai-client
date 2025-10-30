@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function ContactHeroSection() {
     return (
         <section className="relative bg-black lg:h-[90vh] flex flex-col items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none lg:rounded-t-2xl rounded-b-2xl">
-            <Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="object-cover opacity-[55%]" />
 
             <div className="relative z-10 w-full h-screen">
                 <div className="flex flex-col-reverse lg:flex-row w-full h-full">
@@ -22,6 +21,8 @@ export default function ContactHeroSection() {
 
                     {/* RIGHT VISUAL AREA */}
                     <div className="relative w-full lg:w-[48%]  h-[80vh] lg:h-screen overflow-hidden">
+                                    <Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="absolute inset-0 w-full h-full  object-cover opacity-[55%]" />
+
 
                         {/* GIF Background */}
                         <img

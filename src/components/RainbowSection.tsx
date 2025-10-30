@@ -71,7 +71,7 @@ export default function RainbowSection() {
       {/* Desktop Version - Keep Original (768px and above) */}
       <div
         ref={desktopContainerRef}
-        className="relative w-full h-[500px] bg-black overflow-hidden hidden md:block"
+        className="relative w-full h-[500px] rounded-b-[16px] bg-black overflow-hidden hidden md:block"
       >
         {/* Background noise with soft top border */}
         <div 

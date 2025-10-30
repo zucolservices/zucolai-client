@@ -25,7 +25,7 @@ const UseCasesList = () => {
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, '-')
             .replace(/(^-|-$)/g, '');
-    const borderColors = ['#38A3F3', '#E52DE8', '#BA8DFF'];
+    const borderColors = [' #BA8DFF', '#E52DE8', '#38A3F3'];
     return (
         <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto  py-[100px] lg:py-[140px]">
             <div className='space-y-6'>
@@ -54,7 +54,7 @@ const UseCasesList = () => {
                             >
                                 {/* Hover background image layer */}
                                 <div
-                                  className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
+                                  className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-100 lg:opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100 z-0"
                                   style={{ backgroundImage: `url(${item.imageUrl})` }}
                                 />
                                 <div className="relative z-10 rounded-[12px] space-y-3">
@@ -64,14 +64,14 @@ const UseCasesList = () => {
 
                                 {/* Know More button - slides up on hover */}
                                 <div className="absolute left-6 right-6 bottom-6 z-10">
-                                    <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+                                    <div className="opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-6 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out">
                                         <Link
                                             href={`/use-cases/${toSlug(item.title)}`}
                                             className="flex items-center justify-between border text-[#000] bg-white/70 backdrop-blur rounded-[12px] w-[160px] h-[44px] px-4 text-[16px]"
                                             style={{ borderColor: borderColors[index] || '#2A71FF' }}
                                         >
                                             <span className="text-[16px]">Know More</span>
-                                            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                                            <span className="inline-block transition-transform lg:group-hover:translate-x-1">→</span>
                                         </Link>
                                     </div>
                                 </div>

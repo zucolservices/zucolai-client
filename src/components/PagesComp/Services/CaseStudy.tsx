@@ -45,7 +45,10 @@ const CaseStudy = () => {
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Case Studies</span>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                        {cardsContent?.map((item, index) => (
+                        {cardsContent?.map((item, index) => {
+                            const borderColors = [' #BA8DFF', '#E52DE8', '#38A3F3'];
+                            const borderColor = borderColors[index] || '#38A3F3';
+                            return (
                             <div
                                 key={index}
                                 className="group relative rounded-[16px] p-6 border border-[#00000033]/60 overflow-hidden"
@@ -58,18 +61,20 @@ const CaseStudy = () => {
 
                                 {/* Know More button - slides up on hover */}
                                 <div className="absolute left-6 right-6 bottom-6">
-                                    <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+                                    <div className="opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-6 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out">
                                         <Link
                                             href={`/use-cases/${toSlug(item.title)}`}
-                                            className="flex items-center justify-between border border-[#38A3F3] text-[#000] bg-[#FFFFFF] backdrop-blur rounded-[8px] w-[160px] h-[44px] px-4 text-[16px]"
+                                            className="flex items-center justify-between border text-[#000] bg-[#FFFFFF] backdrop-blur rounded-[8px] w-[160px] h-[44px] px-4 text-[16px]"
+                                            style={{ borderColor }}
                                         >
                                             <span className="text-[#000000] font-light text-[16px]">Know More</span>
-                                            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                                            <span className="inline-block transition-transform lg:group-hover:translate-x-1">→</span>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </div>
