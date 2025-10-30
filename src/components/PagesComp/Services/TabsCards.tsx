@@ -69,11 +69,13 @@ const RightIcons = () => {
 const TabsCards = () => {
     const [activeTab, setActiveTab] = useState(0);
     const activeContent = tabsContent[activeTab];
+    const isSmallScreen = window.innerWidth < 1100;
+    console.log(isSmallScreen)
 
     return (
         <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto md:pb-16 pt-8">
 
-            <div className="w-full overflow-x-auto scrollbar-hide">
+            <div className={`w-full ${isSmallScreen ? "overflow-x-auto scrollbar-none" : ""}`}>
                 <div className="flex gap-1">
                     {tabsContent.map((tab, index) => (
                         <button

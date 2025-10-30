@@ -167,20 +167,20 @@ export default function GetInTouchSection() {
         style={{ animationDuration: '6s', animationDelay: '2s' }} />
 
       <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-left z-10 w-full" ref={sectionRef}>
-        <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] lg:text-5xl leading-tight md:leading-snug">
-          <div className="mb-2 md:mb-1">
+        <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] leading-[32px] sm:leading-[40px] md:leading-[48px]">
+          <div className="mb-2 md:mb-0">
             {renderAnimatedText("Building AI tools to solve real", 0)}
           </div>
-          <div className="mb-2 md:mb-1">
+          <div className="mb-2 md:mb-0">
             {renderAnimatedText("problems. Zucol.ai combines tech and", 6)}
           </div>
-          <div className="mb-2 md:mb-1">
+          <div className="mb-2 md:mb-0">
             {renderAnimatedText("business to deliver effective systems.", 12)}
           </div>
-          <div className="mb-2 md:mb-1">
+          <div className="mb-2 md:mb-0">
             {renderAnimatedText("We power great innovation across", 17)}
           </div>
-          <div className="mb-2 md:mb-1">
+          <div className="mb-2 md:mb-0">
             {renderAnimatedText("multiple industries.", 21)}
           </div>
         </h1>
