@@ -60,7 +60,7 @@ export default function ServicesSection() {
                   Seamless adoption powered by human-centered design.
                 </p>
               </div>
-              <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
+              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
@@ -82,7 +82,7 @@ export default function ServicesSection() {
                   Rapid iteration with AI-powered assistance.
                 </p>
               </div>
-              <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
+              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
@@ -104,7 +104,7 @@ export default function ServicesSection() {
                   End-to-end AI solutions from ideation to production.
                 </p>
               </div>
-              <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
+              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
@@ -126,7 +126,7 @@ export default function ServicesSection() {
                   Enterprise-grade security from day one.
                 </p>
               </div>
-              <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
+              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
@@ -148,7 +148,7 @@ export default function ServicesSection() {
                   Sector-specific AI tuned to solve real pain points.
                 </p>
               </div>
-              <div className="w-16 h-16 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
+              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/aiinnovation.svg"
                   alt="Verticalized AI Innovation"
@@ -161,10 +161,26 @@ export default function ServicesSection() {
 
           {/* Explore All Services */}
           <div className="bg-[#F5F9FF] rounded-xl p-6 relative overflow-hidden h-32">
-            <div className="flex items-center justify-center h-full">
+            <div className="relative flex items-center justify-center h-full">
               <Link href="/services" className="cursor-pointer bg-black text-white px-6 py-3 rounded-lg text-sm font-medium">
                 Explore All Services
               </Link>
+              <div className="absolute -top-3 -right-1 w-16 h-16">
+                <Image
+                  src="/images/svgs/start11.svg"
+                  alt="Decorative star"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="absolute -bottom-3 -left-1 w-16 h-16">
+                <Image
+                  src="/images/svgs/start12.svg"
+                  alt="Decorative star"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -383,7 +399,7 @@ export default function ServicesSection() {
                   Rapid iteration with{'\n'}AI-powered assistance.
                 </p>
               </div>
-              <div className="absolute top-[20%] -translate-y-1/2 right-[-20px] w-[55%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
+              <div className="absolute top-[30%] -translate-y-1/2 right-[-20px] w-[55%] max-w-[200px] aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12">
                 <Image
                   src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
@@ -406,7 +422,7 @@ export default function ServicesSection() {
                   End-to-end AI solutions{'\n'}from ideation to production.
                 </p>
               </div>
-              <div className="absolute top-[30%] -translate-y-1/2 right-[-20px] w-[70%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-12">
+              <div className="absolute top-[32%] -translate-y-1/2 right-[-20px] w-[70%] max-w-[300px] aspect-square transition-all duration-700 group-hover:scale-120 group-hover:rotate-12">
                 <Image
                   src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
