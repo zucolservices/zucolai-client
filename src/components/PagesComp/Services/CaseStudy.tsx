@@ -5,17 +5,17 @@ const cardsContent = [
     {
         title: "Loan Information Voice Agent (Vridhi Home Finance)",
         description: "AI bot that gathers information related to loan from interested leads.",
-        imageUrl: "/images/image_1001978369.png"
+        imageUrl: "/images/image_001978369.jpg"
     },
     {
         title: "AI Learner (Desklib)",
         description: "AI bot which provides lecture for uploaded study material.",
-        imageUrl: "/images/image_1001978368.png"
+        imageUrl: "/images/image_001978368.jpg"
     },
     {
         title: "Zoice-style demo use cases",
         description: "lead qualification, loan eligibility, appointment booking.  ",
-        imageUrl: "/images/image_1001978367.png"
+        imageUrl: "/images/image_001978367.jpg"
     },
 ];
 
@@ -49,30 +49,30 @@ const CaseStudy = () => {
                             const borderColors = [' #BA8DFF', '#E52DE8', '#38A3F3'];
                             const borderColor = borderColors[index] || '#38A3F3';
                             return (
-                            <div
-                                key={index}
-                                className="group relative rounded-[16px] p-6 border border-[#00000033]/60 overflow-hidden"
-                                style={{ backgroundImage: `url(${item.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '300px' }}
-                            >
-                                <div className="rounded-[12px] space-y-3">
-                                    <p style={{ fontWeight: 300 }} className="md:text-[30px] text-[24px] leading-[1.2] font-normal text-[#000]">{item.title}</p>
-                                    <p style={{ fontWeight: 300 }} className="text-[16px] font-normal text-[#000]/60">{item.description}</p>
-                                </div>
+                                <div
+                                    key={index}
+                                    className="group relative rounded-[16px] p-6 border border-[#00000033]/60 overflow-hidden"
+                                    style={{ backgroundImage: `url(${item.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '300px' }}
+                                >
+                                    <div className="rounded-[12px] space-y-3">
+                                        <p style={{ fontWeight: 300 }} className="md:text-[30px] text-[24px] leading-[1.2] font-normal text-[#000]">{item.title}</p>
+                                        <p style={{ fontWeight: 300 }} className="text-[16px] font-normal text-[#000]/60">{item.description}</p>
+                                    </div>
 
-                                {/* Know More button - slides up on hover */}
-                                <div className="absolute left-6 right-6 bottom-6">
-                                    <div className="opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-6 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out">
-                                        <Link
-                                            href={`/use-cases/${toSlug(item.title)}`}
-                                            className="flex items-center justify-between border text-[#000] bg-[#FFFFFF] backdrop-blur rounded-[8px] w-[160px] h-[44px] px-4 text-[16px]"
-                                            style={{ borderColor }}
-                                        >
-                                            <span className="text-[#000000] font-light text-[16px]">Know More</span>
-                                            <span className="inline-block transition-transform lg:group-hover:translate-x-1">→</span>
-                                        </Link>
+                                    {/* Know More button - slides up on hover */}
+                                    <div className="absolute left-6 right-6 bottom-6">
+                                        <div className="opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-6 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out">
+                                            <Link
+                                                href={`/use-cases/${toSlug(item.title)}`}
+                                                className="flex items-center justify-between border text-[#000] bg-[#FFFFFF] backdrop-blur rounded-[8px] w-[160px] h-[44px] px-4 text-[16px]"
+                                                style={{ borderColor }}
+                                            >
+                                                <span className="text-[#000000] font-light text-[16px]">Know More</span>
+                                                <span className="inline-block transition-transform lg:group-hover:translate-x-1">→</span>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             );
                         })}
                     </div>
