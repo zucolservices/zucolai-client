@@ -5,7 +5,12 @@ import { usePathname } from "next/navigation";
 
 const AnimatedLogo = () => {
   const pathname = usePathname();
-  const isCaseStudy = pathname?.startsWith("/use-cases/") || pathname === "/use-cases";
+  const isCaseStudy =
+    pathname?.startsWith("/use-cases/") ||
+    pathname === "/use-cases" ||
+    pathname?.startsWith("/cookie-policy") ||
+    pathname?.startsWith("/privacy-policy") ||
+    pathname?.startsWith("/terms-of-use");
   const zucolWordmark = isCaseStudy ? "/logos/zucol-dark.svg" : "/logos/zucol.svg";
   const aiMark = isCaseStudy ? "/logos/ai-dark.svg" :"/logos/ai.svg"
   const logoMark = isCaseStudy ? "/logos/logo-dark.svg": "/logos/logoo.svg"

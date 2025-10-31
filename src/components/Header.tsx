@@ -13,7 +13,14 @@ export default function Header() {
   const [status, setStatus] = useState<null | { ok: boolean; message: string }>(null);
 
   const pathname = usePathname();
-  const blackText = (pathname.includes("/use-cases") || pathname.startsWith("/blog/") || pathname.startsWith("/use-cases/"))
+  const blackText = (
+    pathname.includes("/use-cases") ||
+    pathname.startsWith("/blog/") ||
+    pathname.startsWith("/use-cases/") ||
+    pathname.startsWith("/cookie-policy") ||
+    pathname.startsWith("/privacy-policy") ||
+    pathname.startsWith("/terms-of-use")
+  )
   const logoMark = blackText ? "/logos/logo-dark.svg": "/logos/logoo.svg"
 
   const buttonColor = blackText ? "bg-[#000000]/15 text-[#000000]" : "bg-[#FFFFFF26] text-[#FFFFFF]"

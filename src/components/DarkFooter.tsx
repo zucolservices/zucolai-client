@@ -2,14 +2,24 @@
 import RainbowSection from "./RainbowSection";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from 'next/link';
 
 export default function DarkFooter() {
   const footerRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
   const menuItems = {
-    Menu: ["Solutions", "Resources", "Use Case", "About Us"],
+    Menu: ["Services", "Use Cases", "About Us"],
     Additional: ["Cookie Policy", "Privacy Policy", "Terms of Use"],
+  };
+
+  const routeMap: Record<string, string> = {
+    Services: '/services',
+    'Use Cases': '/use-cases',
+    'About Us': '/about-us',
+    'Cookie Policy': '/cookie-policy',
+    'Privacy Policy': '/privacy-policy',
+    'Terms of Use': '/terms-of-use',
   };
 
   return (
@@ -113,13 +123,13 @@ export default function DarkFooter() {
               <p className="text-[16px] font-medium text-white/100">Menu</p>
               <div className="flex gap-x-8 lg:gap-x-12">
                 {menuItems.Menu.map((item) => (
-                  <a
+                  <Link
                     key={item}
-                    href="#"
+                    href={routeMap[item]}
                     className="text-white/50 text-[16px] hover:text-white transition-colors duration-300"
                   >
                     {item}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -127,13 +137,13 @@ export default function DarkFooter() {
               <p className="text-[16px] font-medium text-white/100 text-right">Additional</p>
               <div className="flex gap-x-8 lg:gap-x-12">
                 {menuItems.Additional.map((item) => (
-                  <a
+                  <Link
                     key={item}
-                    href="#"
+                    href={routeMap[item]}
                     className="text-white/50 text-[16px] hover:text-white transition-colors duration-300"
                   >
                     {item}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -146,13 +156,13 @@ export default function DarkFooter() {
               <p className="text-sm font-medium text-white/40 mb-4">Menu</p>
               <div className="flex flex-wrap gap-x-8 gap-y-2">
                 {menuItems.Menu.map((item) => (
-                  <a
+                  <Link
                     key={item}
-                    href="#"
+                    href={routeMap[item]}
                     className="text-white/60 hover:text-white transition-colors duration-300"
                   >
                     {item}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -162,13 +172,13 @@ export default function DarkFooter() {
               <p className="text-sm font-medium text-white/40 mb-4">Additional</p>
               <div className="flex flex-wrap gap-x-8 gap-y-2">
                 {menuItems.Additional.map((item) => (
-                  <a
+                  <Link
                     key={item}
-                    href="#"
+                    href={routeMap[item]}
                     className="text-white/60 hover:text-white transition-colors duration-300"
                   >
                     {item}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

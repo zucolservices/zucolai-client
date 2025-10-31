@@ -21,7 +21,7 @@ export default function HeroSection() {
 
       <Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="object-cover opacity-[55%] z-[3]" />
 
-      <div className="relative z-[10] w-full px-6 md:px-16 lg:px-16 max-w-[80rem] mx-auto pb-30 md:pb-[8px] lg:pb-0 lg:pt-32">
+      <div className="relative z-[10] w-full px-6 md:px-16 lg:px-28 max-w-[80rem] mx-auto pb-30 md:pb-[8px] lg:pb-0 lg:pt-32">
         <HeadingPurple title="[Transforming AI Services]" />
 
         <h1 className="text-[32px] md:text-[32px] lg:text-[40px] font-light leading-[40px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-2 tracking-[-0.02em] max-w-4xl font-['Inter Display']">
