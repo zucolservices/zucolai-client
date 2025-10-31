@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description:
       'Learn about our mission, team, and approach to delivering secure, adoption-focused AI solutions.',
     url: 'https://zucol.ai/about-us',
-    images: [
+images: [
       { url: '/og-image.png', width: 1200, height: 630, alt: 'Zucol AI' },
     ],
   },
