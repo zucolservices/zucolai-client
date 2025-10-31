@@ -35,8 +35,9 @@ export default function ContactFormSection() {
             }
             setStatus({ ok: true, message: "Thanks! We'll get back to you soon." });
             form.reset();
-        } catch (err: any) {
-            setStatus({ ok: false, message: err?.message || 'Something went wrong.' });
+        } catch (err: unknown) {
+            const message = err instanceof Error ? err.message : 'Something went wrong.';
+            setStatus({ ok: false, message });
         } finally {
             setSubmitting(false);
         }
