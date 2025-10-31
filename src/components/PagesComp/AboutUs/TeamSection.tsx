@@ -191,18 +191,19 @@ const TeamSection: React.FC = () => {
                             <p className='text-[#FFFFFFCC] text-[14px] p-0 font-light font-[300] m-0'>{member.position}</p>
                         </div>
 
-                        <div className='relative z-0 min-h-[300px] sm:min-h-[550px] lg:min-h-[320px] w-full'>
-                            <Image
-                                src={member.image}
-                                alt={member.name}
-                                fill
-                                className='object-cover grayscale-0 lg:grayscale transition duration-150 ease-out lg:group-hover:grayscale-0'
-                                priority={false}
-                                loading="lazy"
-                                sizes="(min-width: 1024px) 33vw, 100vw"
-                                quality={80}
-                            />
-                        </div>
+                       <div className="relative w-full h-[300px] sm:h-[550px] lg:h-[320px]">
+  <Image
+    src={member.image}
+    alt={member.name}
+    width={400}   // you can adjust
+    height={500}  // aspect ratio stable
+    className="object-cover grayscale-0 lg:grayscale transition duration-150 ease-out lg:group-hover:grayscale-0"
+    loading="lazy"
+    quality={80}
+    sizes="(min-width: 1024px) 33vw, 100vw"
+  />
+</div>
+
                     </div>
                 ))}
 
