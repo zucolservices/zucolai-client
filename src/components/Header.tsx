@@ -34,6 +34,18 @@ export default function Header() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  // Listen to global events to open/close the contact modal from anywhere (e.g., Footer CTA)
+  useEffect(() => {
+    const open = () => setIsContactOpen(true);
+    const close = () => setIsContactOpen(false);
+    window.addEventListener('open-contact', open as EventListener);
+    window.addEventListener('close-contact', close as EventListener);
+    return () => {
+      window.removeEventListener('open-contact', open as EventListener);
+      window.removeEventListener('close-contact', close as EventListener);
+    };
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (submitting) return;
