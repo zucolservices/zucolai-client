@@ -23,7 +23,7 @@ const Page = () => {
         <section className="max-w-6xl mx-auto px-6 md:px-8 lg:px-0 py-16">
           <h1 className="text-3xl md:text-4xl font-light text-[#0B0B0B] mb-6">Cookie Policy</h1>
           <p className="text-[#0B0B0B]/80 mb-6">
-            This Cookie Policy explains how Zucol AI ("we", "us", or "our") uses cookies and similar
+            This Cookie Policy explains how Zucol AI (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) uses cookies and similar
             technologies on our websites and services. It should be read together with our Privacy Policy.
           </p>
 

@@ -23,7 +23,7 @@ const Page = () => {
         <section className="max-w-6xl mx-auto px-6 md:px-8 lg:px-0 py-16">
           <h1 className="text-3xl md:text-4xl font-light text-[#0B0B0B] mb-6">Privacy Policy</h1>
           <p className="text-[#0B0B0B]/80 mb-6">
-            Zucol AI ("we", "us", or "our") is committed to protecting your privacy. This policy describes
+            Zucol AI (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting your privacy. This policy describes
             what information we collect, how we use it, and your rights.
           </p>
 

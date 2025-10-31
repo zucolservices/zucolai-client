@@ -23,7 +23,7 @@ const Page = () => {
         <section className="max-w-6xl mx-auto px-6 md:px-8 lg:px-0 py-16">
           <h1 className="text-3xl md:text-4xl font-light text-[#0B0B0B] mb-6">Terms of Use</h1>
           <p className="text-[#0B0B0B]/80 mb-6">
-            These Terms of Use ("Terms") govern your access to and use of Zucol AI websites and services. By using
+            These Terms of Use (&quot;Terms&quot;) govern your access to and use of Zucol AI websites and services. By using
             our services, you agree to these Terms.
           </p>
 
@@ -42,7 +42,7 @@ const Page = () => {
 
           <h2 className="text-2xl font-light mt-10 mb-3">Disclaimers</h2>
           <p className="text-[#0B0B0B]/80 mb-4">
-            Services are provided "as is" without warranties. To the extent permitted by law, we disclaim implied
+            Services are provided &quot;as is&quot; without warranties. To the extent permitted by law, we disclaim implied
             warranties and limit liability.
           </p>
 
