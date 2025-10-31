@@ -147,7 +147,7 @@ const MissionVission = () => {
                     </div>
                 </div>
                 <div className="mt-10" ref={sectionRef2}>
-                    <HeadingPurple title="[ The Vission ]" />
+                    <HeadingPurple title="[ The Vision ]" />
                     <div className="w-full border-b border-[#00000040]/25 hidden md:block"></div>
                     <div className="flex justify-end w-full">
                         <div className="max-w-xl lg:px-4 py-4 text-left text-[#00000066]/40 text-[32px] leading-[40px]">
