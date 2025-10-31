@@ -2,6 +2,7 @@
 "use client";
 import HeadingPurple from '@/components/HeadingPurple'
 import React, { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 
 type TeamMember = {
     id: number;
@@ -170,7 +171,9 @@ const TeamSection: React.FC = () => {
                         className='group relative   rounded-[14.5px] flex flex-col justify-between lg:h-[400px] min-w-[228px] min-w-[300px] overflow-hidden'
                         style={{
                             background:
-                                'linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(180.06deg, #1C1F22 0.05%, #39516B 99.95%)'
+                                'linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(180.06deg, #1C1F22 0.05%, #39516B 99.95%)',
+                            contentVisibility: 'auto',
+                            containIntrinsicSize: '400px 320px',
                         }}
                     >
                         {/* Hover gradient overlay */}
@@ -188,7 +191,18 @@ const TeamSection: React.FC = () => {
                             <p className='text-[#FFFFFFCC] text-[14px] p-0 font-light font-[300] m-0'>{member.position}</p>
                         </div>
 
-                        <img src={member.image} alt={member.name} className='relative z-0 object-cover min-h-[320px] w-full grayscale-0 md:grayscale transition duration-150 ease-out md:group-hover:grayscale-0' style={{ willChange: 'filter' }} />
+                        <div className='relative z-0 min-h-[320px] w-full'>
+                            <Image
+                                src={member.image}
+                                alt={member.name}
+                                fill
+                                className='object-cover grayscale-0 md:grayscale transition duration-150 ease-out md:group-hover:grayscale-0'
+                                priority={false}
+                                loading="lazy"
+                                sizes="(min-width: 1024px) 33vw, 100vw"
+                                quality={80}
+                            />
+                        </div>
                     </div>
                 ))}
 
