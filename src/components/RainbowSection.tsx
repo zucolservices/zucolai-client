@@ -121,7 +121,7 @@ export default function RainbowSection() {
         </div>
         <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center z-30 text-center">
           <p className="text-white text-xs">
-            © Zucol.ai, All Rights Reserved.
+            © Zucol Services PVT LTD, All Rights Reserved.
           </p>
         </div>
 
@@ -159,7 +159,7 @@ export default function RainbowSection() {
               className="h-6 mx-auto mb-2"
             />
             <p className="text-xs opacity-80">
-              © Zucol.ai, All Rights Reserved.
+              © Zucol Services PVT LTD, All Rights Reserved.
             </p>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function RainbowSection() {
               className="h-5 mx-auto mb-2"
             />
             <p className="text-[10px] opacity-80">
-              © Zucol.ai, All Rights Reserved.
+              © Zucol Services PVT LTD, All Rights Reserved.
             </p>
           </div>
         </div>
