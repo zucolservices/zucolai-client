@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-const page = ({ params }: { params: { slug: string } }) => {
+export default function Page({ params }: { params: { slug: string } }) {
     const post = blogs.find(b => b.id === params.slug);
     if (!post) return notFound();
 
@@ -50,5 +50,3 @@ const page = ({ params }: { params: { slug: string } }) => {
         </div>
     );
 }
-
-export default page
