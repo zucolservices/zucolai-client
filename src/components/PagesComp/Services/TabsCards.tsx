@@ -118,7 +118,7 @@ const TabsCards = () => {
                 <div className="">
                     <Image
                         alt=""
-                        src="/images/PinDown.io_@tuniedesign_1758698608.mp4 1.png"
+                        src="/images/PinDown.io_@tuniedesig_.png"
                         height={468}
                         width={628}
                     />
