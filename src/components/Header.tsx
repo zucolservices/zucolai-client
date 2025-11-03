@@ -139,7 +139,7 @@ export default function Header() {
         <nav className="md:hidden px-6 py-4 bg-black/95 text-[#FFFFFF] border-t border-white/10">
           <div className="flex flex-col gap-4">
             <HeadingTitle title="Services" link="/services" />
-            <HeadingTitle title="Resources / Blogs" link="/resources" />
+            <HeadingTitle title="Resources / Blogs" link="/blog" />
             <HeadingTitle title="Use Cases" link="/use-cases" />
             <HeadingTitle title="About Us" link="/about-us" />
             <HeadingTitle title="Contact" link="/contact-us" />
