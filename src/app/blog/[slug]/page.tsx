@@ -6,8 +6,9 @@ import { blogs } from '@/data/blogs';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const post = blogs.find(b => b.id === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const post = blogs.find(b => b.id === slug);
     if (!post) return {};
 
     const plain = post.content.replace(/<[^>]+>/g, '');
@@ -35,8 +36,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-    const post = blogs.find(b => b.id === params.slug);
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const post = blogs.find(b => b.id === slug);
     if (!post) return notFound();
 
     return (
