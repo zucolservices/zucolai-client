@@ -10,7 +10,9 @@ const AnimatedLogo = () => {
     pathname === "/use-cases" ||
     pathname?.startsWith("/cookie-policy") ||
     pathname?.startsWith("/privacy-policy") ||
-    pathname?.startsWith("/terms-of-use");
+    pathname?.startsWith("/terms-of-use") ||
+   pathname?.startsWith("/blog/") 
+
   const zucolWordmark = isCaseStudy ? "/logos/zucol-dark.svg" : "/logos/zucol.svg";
   const aiMark = isCaseStudy ? "/logos/ai-dark.svg" :"/logos/ai.svg"
   const logoMark = isCaseStudy ? "/logos/logo-dark.svg": "/logos/logoo.svg"

@@ -5,7 +5,7 @@ export default function BlogMainHeroSection() {
         <section className="relative h-screen bg-gradient-to-b from-[#00191c] via-[#000] to-[#000] lg:h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
 
             <video
-                className="absolute object-cover rotate-[90deg] bg-red-900 mt-[1%]  right-[20%]  "
+                className="absolute object-cover rotate-[90deg]  mt-[1%]  right-[20%]  "
                 src="/backgrounds/Blog.mp4"
                 autoPlay
                 loop

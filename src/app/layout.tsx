@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description:
       "AI solutions designed for adoption: voice agents, chatbots, RAG, and predictive analytics.",
     images: [
-      { url: "/og-image.png", width: 1200, height: 630, alt: "Zucol AI" },
+      { url: "/logos/zucolLogo.png", width: 1200, height: 630, alt: "Zucol AI" },
     ],
   },
   twitter: {
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     title: "Zucol AI",
     description:
       "AI solutions designed for adoption: voice agents, chatbots, RAG, and predictive analytics.",
-    images: ["/og-image.png"],
+    images: ["/logos/zucolLogo.png"],
   },
   icons: {
     icon: "/favicon.ico",
