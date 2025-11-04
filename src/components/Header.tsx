@@ -46,6 +46,23 @@ export default function Header() {
     };
   }, []);
 
+  // Auto-open contact modal for specific landing URLs with UTM params
+  useEffect(() => {
+    try {
+      const search = window.location.search;
+      if (!search) return;
+      const sp = new URLSearchParams(search);
+      const source = sp.get('source');
+      const medium = sp.get('utm_medium');
+      const campaign = sp.get('utm_campaign');
+      if (source === 'mail' && medium === 'email' && campaign === 'get-in-touch') {
+        setIsContactOpen(true);
+      }
+    } catch (e) {
+      // no-op
+    }
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (submitting) return;
