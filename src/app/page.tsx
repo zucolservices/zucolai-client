@@ -16,7 +16,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <GetInTouchSection />
-        <TrustedCompanies />
+        {/* <TrustedCompanies /> */}
         <ServicesSection />
         <StatsComponent />
         <SolutionsSection />
