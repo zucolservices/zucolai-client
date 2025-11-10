@@ -42,18 +42,19 @@ export default function SolutionsSection() {
         {/* Desktop Header Section */}
 
         {/* Mobile Header Section */}
-        <div className="lg:hidden text-center md:text-left mb-8 space-y-6">
-          <p className="text-sm tracking-wide inline-block font-medium text-[#BA8DFF] py-1 rounded-full">
+        <div className="lg:hidden text-center text-left mb-8 space-y-6">
+       
+          <div className="space-y-[0.4px]">
+               <p className="text-sm mb-[8px] tracking-wide inline-block font-medium text-[#BA8DFF] py-1 rounded-full">
             [ Our Solutions ]
           </p>
-          <div className="space-y-2">
             <h2
-              className="text-heading-display-light"
+              className="text-[24px] lg:text-[40px]"
             >
               Engineered for Impact.
             </h2>
             <h2
-              className="text-heading-display-dark"
+              className="text-[24px] lg:text-[40px]"
             >
               Designed for Adoption.
             </h2>

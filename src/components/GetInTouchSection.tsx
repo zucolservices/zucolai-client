@@ -103,35 +103,17 @@ export default function GetInTouchSection() {
   useEffect(() => {
     if (isInView) {
       console.log("Starting animation!"); // Debug log
-      const lines = [
-        "Building AI tools to solve real",
-        "problems. Zucol.ai combines tech and",
-        "business to deliver effective systems.",
-        "We power great innovation across",
-        "multiple industries."
-      ];
+      const fullText = "Building AI tools to solve real problems. Zucol.ai combines tech and business to deliver effective systems. We power great innovation across multiple industries.";
 
-      // Slower, sequential animation settings
+      // Sequential animation settings
       const perWordDelay = 120; // ms between words
-      const lineGap = 200; // extra pause between lines
 
-      let globalWordIndex = 0;
-      let cumulativeDelay = 0;
-
-      lines.forEach((line) => {
-        const wordsInLine = line.split(" ");
-        const lineStartDelay = cumulativeDelay;
-
-        wordsInLine.forEach((_, wordIndexInLine) => {
-          const currentWordIndex = globalWordIndex;
-          setTimeout(() => {
-            console.log(`Animating word ${currentWordIndex}`); // Debug log
-            setAnimatedWords(prev => new Set([...prev, currentWordIndex]));
-          }, lineStartDelay + wordIndexInLine * perWordDelay);
-          globalWordIndex++;
-        });
-
-        cumulativeDelay += wordsInLine.length * perWordDelay + lineGap;
+      const words = fullText.split(" ");
+      words.forEach((_, idx) => {
+        setTimeout(() => {
+          console.log(`Animating word ${idx}`); // Debug log
+          setAnimatedWords(prev => new Set([...prev, idx]));
+        }, idx * perWordDelay);
       });
     }
   }, [isInView]);
@@ -168,25 +150,11 @@ export default function GetInTouchSection() {
 
       <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-left z-10 w-full" ref={sectionRef}>
         <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] leading-[32px] sm:leading-[40px] md:leading-[48px]">
-          <div className="mb-2 md:mb-0">
-            {renderAnimatedText("Building AI tools to solve real", 0)}
-          </div>
-          <div className="mb-2 md:mb-0">
-            {renderAnimatedText("problems. Zucol.ai combines tech and", 6)}
-          </div>
-          <div className="mb-2 md:mb-0">
-            {renderAnimatedText("business to deliver effective systems.", 12)}
-          </div>
-          <div className="mb-2 md:mb-0">
-            {renderAnimatedText("We power great innovation across", 17)}
-          </div>
-          <div className="mb-2 md:mb-0">
-            {renderAnimatedText("multiple industries.", 21)}
-          </div>
+          {renderAnimatedText("Building AI tools to solve real problems. Zucol.ai combines tech and business to deliver effective systems. We power great innovation across multiple industries.", 0)}
         </h1>
 
         {/* Buttons with enhanced hover effects - responsive */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12">
+        <div className="flex sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12">
           <button onClick={() => window.location.href = "/about-us"} className="cursor-pointer bg-[#000000] rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
             About us
           </button>

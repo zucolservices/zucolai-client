@@ -37,7 +37,7 @@ export default function FaqSection() {
       
       <div className="max-w-[90rem] mx-auto">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="lg:text-center mb-20">
           <p className="text-purple-label">
             [ FAQ ]
           </p>

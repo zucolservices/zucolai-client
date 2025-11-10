@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen bg-gradient-to-b from-[#00191c] via-[#00191c] to-[#00191c] lg:h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
       <video
-        className="absolute object-cover mt-0  lg:rotate-[90deg] lg:mt-[1%] 2xl:mt-[8%]   lg:right-[10%]  "
+        className="absolute object-cover mt-0 h-[100%] lg:h-auto  lg:rotate-[90deg] lg:mt-[1%] 2xl:mt-[8%]   lg:right-[10%]  "
         src="/backgrounds/hero.mp4"
         autoPlay
         loop
@@ -24,7 +24,7 @@ export default function HeroSection() {
       <div className="relative z-[10] w-full px-6 md:px-16 lg:px-28 max-w-[80rem] mx-auto pb-30 md:pb-[8px] lg:pb-0 lg:pt-32">
         <HeadingPurple title="[Transforming AI Services]" />
 
-        <h1 className="text-[32px] md:text-[32px] lg:text-[40px] font-light leading-[40px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-2 tracking-[-0.02em] max-w-4xl font-['Inter Display']">
+        <h1 className="text-[24px] md:text-[32px] lg:text-[40px] font-light leading-[32px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-2 tracking-[-0.02em] max-w-4xl font-['Inter Display']">
           Build for Impact. Designed for Adoption.
           <br className="hidden md:block" />
           <span className="opacity-90">
