@@ -6,7 +6,7 @@ export default function AboutUsHeroSection() {
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/100 via-black/0 to-black/0 z-[2]" />
 
             <video
-                className="absolute object-cover rotate-[180deg]  mt-[1%]  right-[0%]  "
+                className="absolute object-cover h-[100%] lg:h-auto rotate-[180deg]  mt-[1%]  right-[0%]  "
                 src="/backgrounds/AboutUs.mp4"
                 autoPlay
                 loop

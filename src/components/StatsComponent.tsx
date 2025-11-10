@@ -63,15 +63,15 @@ export default function StatsComponent() {
                   {[...row.items, ...row.items].map((stat, index) => (
                     <div
                       key={`${row.row}-${index}`}
-                      className="bg-[#F8F8F8] rounded-[16px] p-10 w-[350px] flex-shrink-0 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:brightness-[1.02]"
+                      className="bg-[#F8F8F8]  rounded-[16px] lg:p-10 p-4 w-[350px] flex-shrink-0 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:brightness-[1.02]"
                     >
-                      <h3 className="text-[#BA8DFF] text-[40px] leading-[48px] tracking-[-2%] font-[600] mb-4">
+                      <h3 className="text-[#BA8DFF] text-[28.6px] lg:text-[40px] leading-[48px] tracking-[-2%] font-[600] lg:mb-4">
                         {stat.value}
                       </h3>
-                      <h4 className="text-[#BA8DFF] text-[16px] leading-[24px] tracking-[-2%] font-[300] mb-2 opacity-80">
+                      <h4 className="text-[#BA8DFF] text-[11.35px] lg:text-[16px] leading-[24px] lg:leading-[24px] tracking-[-2%] font-[300] lg:mb-2 opacity-80">
                         {stat.label}
                       </h4>
-                      <p className="text-[#4B5563] text-[16px] leading-[24px] tracking-[-2%] font-[300] whitespace-pre-line opacity-80">
+                      <p className="text-[#4B5563] text-[11.35px] lg:text-[16px] leading-[20px] lg:leading-[24px] tracking-[-2%] font-[300] whitespace-pre-line opacity-80">
                         {stat.description}
                       </p>
                     </div>
