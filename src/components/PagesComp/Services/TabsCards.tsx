@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const tabsContent = [
@@ -115,13 +114,17 @@ const TabsCards = () => {
 
             {/* Tab Content */}
             <div key={activeTab} className="mt-[60px] flex flex-col md:flex-row gap-[60px] items-start md:min-h-[400px] animate-fadeIn">
-                <div className="">
-                    <Image
-                        alt=""
-                        src="/images/PinDown.io_@tuniedesig_.png"
-                        height={468}
-                        width={628}
-                    />
+                <div className="w-full md:w-auto">
+                    <video
+                        className="rounded-lg w-full md:w-[628px] h-auto"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    >
+                        <source src="/backgrounds/Conversational_AI_Video.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
                 <div className="">
