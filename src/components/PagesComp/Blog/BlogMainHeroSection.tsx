@@ -1,4 +1,5 @@
 import HeadingPurple from "@/components/HeadingPurple";
+import Image from "next/image";
 
 export default function BlogMainHeroSection() {
     return (
@@ -12,6 +13,12 @@ export default function BlogMainHeroSection() {
                 muted
                 playsInline
             />
+                 <Image
+                                        src="/backgrounds/services-overlay.png"
+                                        alt="Overlay"
+                                        fill
+                                        className="object-cover mix-blend-hue pointer-events-none opacity-[94%]"
+                                    />
             <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[90rem] mx-auto pb-30 md:pb-60 lg:pb-0 lg:pt-32">
                 <HeadingPurple title="[Transforming AI Services]" />
                 <h1 className="  text-[32px] md:text-[32px] lg:text-[40px] font-light font-[300] leading-[40px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-4 md:mb-6 tracking-[-0.02em] max-w-4xl font-['Inter Display'] ">
