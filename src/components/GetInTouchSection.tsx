@@ -148,13 +148,13 @@ export default function GetInTouchSection() {
       <div className="absolute bottom-0 right-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-purple-200 to-indigo-300 opacity-30 blur-3xl rounded-full animate-pulse"
         style={{ animationDuration: '6s', animationDelay: '2s' }} />
 
-      <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-left z-10 w-full" ref={sectionRef}>
-        <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] leading-[32px] sm:leading-[40px] md:leading-[48px]">
+      <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-center z-10 w-full" ref={sectionRef}>
+        <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] leading-[32px] sm:leading-[40px] md:leading-[48px] text-left">
           {renderAnimatedText("Building AI tools to solve real problems. Zucol.ai combines tech and business to deliver effective systems. We power great innovation across multiple industries.", 0)}
         </h1>
 
         {/* Buttons with enhanced hover effects - responsive */}
-        <div className="flex sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12">
+        <div className="flex sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12 justify-start">
           <button onClick={() => window.location.href = "/about-us"} className="cursor-pointer bg-[#000000] rounded-[10px] py-[5px] px-[15px] text-[#FFFFFF] text-[16px] font-light leading-[28px]">
             About us
           </button>
