@@ -139,7 +139,7 @@ const MissionVission = () => {
                     <HeadingPurple title="[ The Mission ]" />
                     <div className="w-full border-b border-[#00000040]/25 hidden md:block"></div>
                     <div className="flex justify-end w-full">
-                        <div className="max-w-xl lg:px-4 py-4 text-left text-[#00000066]/40 text-[32px] leading-[40px]">
+                        <div className="max-w-xl lg:px-4 py-4 text-left text-[#00000066]/40 text-[32px] leading-[40px] font-light">
                             {renderAnimatedText("To democratize AI by making it")}
                             {renderAnimatedText("accessible, secure & outcome-driven.", 0)}
                             {renderAnimatedText("for every industry", 8)}
@@ -150,7 +150,7 @@ const MissionVission = () => {
                     <HeadingPurple title="[ The Vision ]" />
                     <div className="w-full border-b border-[#00000040]/25 hidden md:block"></div>
                     <div className="flex justify-end w-full">
-                        <div className="max-w-xl lg:px-4 py-4 text-left text-[#00000066]/40 text-[32px] leading-[40px]">
+                        <div className="max-w-xl lg:px-4 py-4 text-left text-[#00000066]/40 text-[32px] leading-[40px] font-light">
                             {renderAnimatedText2("To be the global leader in responsible")}
                             {renderAnimatedText2("AI adoption, helping businesses thrive", 0)}
                             {renderAnimatedText2("in a digital-first world.", 8)}

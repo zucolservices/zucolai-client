@@ -60,69 +60,111 @@ const ValuesGrid = () => {
                         <br />
                         {renderAnimatedText("Real Impact.", 2)}
                     </p>
-                    <div className='mt-24'>
-                        <div className="w-full flex gap-2">
-                            <div className='relative w-[60%] h-[228px]'
-                                style={{
-                                    backgroundImage: "url('/images/image 1001978370.png')",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    borderRadius: "16px"
+   <div className="mt-24">
+  {/* Top row */}
+  <div className="w-full flex flex-col md:flex-row gap-2">
+    {/* Innovation First */}
+    <div
+      className="relative w-full md:w-[60%] h-[250px] md:h-[228px] lg:h-[228px]"
+      style={{
+        backgroundImage: "url('/images/image 1001978370.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "16px",
+      }}
+    >
+      <div className="absolute top-[60%] left-[35%] -translate-x-[50%] -translate-y-[50%] text-center md:text-left">
+        <h2 className="text-[#E63EEA] text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] font-semibold">
+          Innovation First
+        </h2>
+        <p className="text-[#000000]/60 text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-light">
+          Always pushing boundaries with <br /> research-led solutions.
+        </p>
+      </div>
+    </div>
 
-                                }}>
-                                <div className='absolute top-[60%] left-[30%] -translate-x-[50%] -translate-y-[50%]'>
-                                    <h2 className='text-[#E63EEA] text-[40px] leading-[48px] font-semibold'>Innovation First</h2>
-                                    <p className='text-[#000000]/60 text-[16px] leading-[24px] font-light'>Always pushing boundaries with <br />research-led solutions.</p>
-                                </div>
-                            </div>
-                            <div className='relative w-[40%] h-[386px]'
-                                style={{
-                                    backgroundImage: "url('/images/image 1001978375.png')",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    borderRadius: "16px"
-                                }}>
-                                <div className='absolute top-[60%] left-[40%] -translate-x-[50%] -translate-y-[50%]'>
-                                    <h2 className='text-[#6DD03F] text-[40px] leading-[48px] font-semibold'>Transparency & Trust</h2>
-                                    <p className='text-[#000000]/60 text-[16px] leading-[24px] font-light'>Building AI that businesses <br />and their customers can rely on.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative -mt-[150px] w-full flex gap-2 items-end">
-                            <div className='absolute top-[20%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[201px] h-[146px]'>
-                                <Image src={"/images/image 1001978373.png"} alt="" fill className='object-cover rounded-[16px]' />
-                            </div>
-                            <div className='relative w-[40%] h-[386px]'
-                                style={{
-                                    backgroundImage: "url('/images/image 1001978374.png')",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    borderRadius: "16px"
-                                }}>
-                                <div className='absolute top-[70%] left-[40%] -translate-x-[50%] -translate-y-[50%]'>
-                                    <h2 className='text-[#D98D53] text-[40px] leading-[48px] font-semibold'>Impact Focused</h2>
-                                    <p className='text-[#000000]/60 text-[16px] leading-[24px] font-light'>Every project is tied to <br />measurable business outcomes</p>
-                                </div>
-                            </div>
-                            <div className='relative w-[60%] h-[228px]'
-                                style={{
-                                    backgroundImage: "url('/images/image 1001978371.png')",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    borderRadius: "16px"
-                                }}
-                            >
-                                <div className='absolute top-[50%] left-[30%] -translate-x-[50%] -translate-y-[50%]'>
-                                    <h2 className='text-[#5589EA] text-[40px] leading-[48px] font-semibold'>Collaboration</h2>
-                                    <p className='text-[#000000]/60 text-[16px] leading-[24px] font-light'>Partnering closely with clients to <br /> ensure AI adoption success.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    {/* Transparency & Trust */}
+    <div
+      className="relative w-full md:w-[40%] h-[300px] md:h-[386px]"
+      style={{
+        backgroundImage: "url('/images/image 1001978375.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "16px",
+      }}
+    >
+      <div className="absolute top-[60%] left-[50%] md:left-[40%] -translate-x-[50%] -translate-y-[50%]  md:text-center lg:text-left">
+        <h2 className="text-[#6DD03F] text-[32px] lg:text-[40px] leading-[36px] md:leading-[48px] font-semibold">
+          Transparency & Trust
+        </h2>
+        <p className="text-[#000000]/60 text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-light">
+          Building AI that businesses <br /> and their customers can rely on.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Bottom row */}
+  <div className="relative -mt-[60px] md:-mt-[150px] w-full flex flex-col md:flex-row gap-2 items-end">
+    {/* Center small box */}
+    <div className="absolute hidden md:block top-[19%] left-[50%] -translate-x-[50%] -translate-y-[50%]  md:w-[128px] lg:w-[201px] h-[100px] ">
+      <Image
+        src="/images/image 1001978373.png"
+        alt="icon"
+        fill
+        className="object-cover rounded-[16px]"
+      />
+    </div>
+
+    {/* Impact Focused */}
+    <div
+      className="relative w-full md:w-[40%] h-[250px] md:h-[386px]"
+      style={{
+        backgroundImage: "url('/images/image 1001978374.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "16px",
+      }}
+    >
+      <div className="absolute top-[70%] left-[50%] md:left-[40%] -translate-x-[50%] -translate-y-[50%] text-center md:text-left">
+        <h2 className="text-[#D98D53] text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] font-semibold">
+          Impact Focused
+        </h2>
+        <p className="text-[#000000]/60 text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-light">
+          Every project is tied to <br /> measurable business outcomes
+        </p>
+      </div>
+    </div>
+
+    {/* Collaboration */}
+    <div
+      className="relative w-full md:w-[60%] h-[250px] md:h-[228px]"
+      style={{
+        backgroundImage: "url('/images/image 1001978371.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "16px",
+      }}
+    >
+      <div className="absolute top-[50%] left-[35%] md:left-[30%] -translate-x-[50%] -translate-y-[50%] md:text-center lg:text-left">
+        <h2 className="text-[#5589EA] text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] font-semibold">
+          Collaboration
+        </h2>
+        <p className="text-[#000000]/60 text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-light">
+          Partnering closely with clients to <br /> ensure AI adoption success.
+        </p>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
                 </div>
 
                 {/* Mobile & Tablet View */}
