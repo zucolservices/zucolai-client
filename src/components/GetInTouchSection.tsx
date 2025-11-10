@@ -80,6 +80,23 @@ export default function GetInTouchSection() {
   const [isInView, setIsInView] = useState(false);
   const [animatedWords, setAnimatedWords] = useState(new Set<number>());
 
+  // Define five segments to control line breaks on desktop
+  const segments = [
+    "Building AI tools to solve real",
+    "problems. Zucol.ai combines tech and",
+    "business to deliver effective systems.",
+    "We power great innovation across",
+    "multiple industries.",
+  ];
+  const segmentOffsets: number[] = (() => {
+    let acc = 0;
+    return segments.map((s) => {
+      const start = acc;
+      acc += s.split(" ").length;
+      return start;
+    });
+  })();
+
   // Intersection Observer for scroll-triggered animation
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -103,7 +120,7 @@ export default function GetInTouchSection() {
   useEffect(() => {
     if (isInView) {
       console.log("Starting animation!"); // Debug log
-      const fullText = "Building AI tools to solve real problems. Zucol.ai combines tech and business to deliver effective systems. We power great innovation across multiple industries.";
+      const fullText = segments.join(" ");
 
       // Sequential animation settings
       const perWordDelay = 120; // ms between words
@@ -148,9 +165,23 @@ export default function GetInTouchSection() {
       <div className="absolute bottom-0 right-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-purple-200 to-indigo-300 opacity-30 blur-3xl rounded-full animate-pulse"
         style={{ animationDuration: '6s', animationDelay: '2s' }} />
 
-      <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-center z-10 w-full" ref={sectionRef}>
-        <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] leading-[32px] sm:leading-[40px] md:leading-[48px] text-left">
-          {renderAnimatedText("Building AI tools to solve real problems. Zucol.ai combines tech and business to deliver effective systems. We power great innovation across multiple industries.", 0)}
+      <div className="relative max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl text-left z-10 w-full" ref={sectionRef}>
+        <h1 className="font-normal text-2xl sm:text-3xl md:text-[40px] leading-[32px] sm:leading-[40px] md:leading-[48px]">
+          <span className="inline md:block">
+            {renderAnimatedText(segments[0], segmentOffsets[0])}
+          </span>
+          <span className="inline md:block">
+            {renderAnimatedText(segments[1], segmentOffsets[1])}
+          </span>
+          <span className="inline md:block">
+            {renderAnimatedText(segments[2], segmentOffsets[2])}
+          </span>
+          <span className="inline md:block">
+            {renderAnimatedText(segments[3], segmentOffsets[3])}
+          </span>
+          <span className="inline md:block">
+            {renderAnimatedText(segments[4], segmentOffsets[4])}
+          </span>
         </h1>
 
         {/* Buttons with enhanced hover effects - responsive */}

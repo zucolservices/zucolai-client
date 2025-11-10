@@ -207,8 +207,8 @@ const TeamSection: React.FC = () => {
       />
 
       {/* Text */}
-      <div className="p-3 sm:p-4 relative z-20 flex-shrink-0">
-        <h2 className="text-[#FDFDFD] text-[18px] sm:text-[22px] font-light m-0">
+      <div className="p-3 sm:p-4 relative z-20 flex-shrink-0 transition-all duration-200 ease-out lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+        <h2 className="text-[#FDFDFD]  text-[18px] sm:text-[22px] font-light m-0">
           {member.name}
         </h2>
         <p className="text-[#FFFFFFCC] text-[12px] sm:text-[14px] font-light m-0">
