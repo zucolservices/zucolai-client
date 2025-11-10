@@ -40,7 +40,7 @@ export default function ServicesHeroSection() {
         />
 
         {/* Layer 4: Content on top */}
-        <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-30 md:pb-60 lg:pb-0 pt-32 lg:pt-32 mt-[5%] lg:mt-[12%]">
+      <div className="relative z-[10] w-full h-full flex  pb-10 lg:pb-0 justify-center  flex-col px-6 md:px-16 lg:px-28 max-w-[80rem] mx-auto  lg:pb-0 ">
           <HeadingPurple title="[Transforming AI Services]" />
 
           <h1 className="text-[24px] md:text-[32px] lg:text-[40px] font-light font-[300] leading-[32px] md:leading-[40px] lg:leading-[48px] text-[#FDFDFD] mb-4 md:mb-6 tracking-[-0.02em] max-w-4xl font-['Inter Display']">

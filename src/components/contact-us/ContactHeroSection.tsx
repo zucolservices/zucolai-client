@@ -9,7 +9,7 @@ export default function ContactHeroSection() {
                 <div className="flex flex-col-reverse lg:flex-row w-full h-full">
 
                     {/* LEFT CONTENT */}
-                    <div className="lg:w-[70%] lg:h-screen justify-center flex flex-col px-[16.5px] py-8 lg:py-0 lg:px-28">
+                    <div className="lg:w-[70%]  lg:h-full justify-center flex flex-col px-[16.5px] py-8 lg:py-0 lg:px-28">
                         <HeadingPurple title="[ Contact Us ]" />
                         <h1 className="text-[32px] md:text-[40px] lg:text-[44px] font-light leading-[40px] md:leading-[48px] lg:leading-[52px] text-[#FDFDFD] mb-4 md:mb-6 tracking-[-0.02em] font-['Inter Display']">
                             Let&apos;s Build the Future of AI Together
