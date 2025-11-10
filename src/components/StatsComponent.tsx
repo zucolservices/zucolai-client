@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import HeadingPurple from "./HeadingPurple";
 
 export default function StatsComponent() {
   const stats = [
@@ -26,9 +27,8 @@ export default function StatsComponent() {
       <div className="px-6 md:px-16 lg:px-24">
         <div className="max-w-[70rem] mx-auto flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
           <div className="w-full lg:w-[30%] mb-8 lg:mb-0 lg:sticky lg:top-32 text-left lg:text-left">
-            <p className="text-sm tracking-wide mb-4 inline-block font-medium text-[#BA8DFF]">
-              [Key Highlights]
-            </p>
+       <HeadingPurple title="[ Key Highlights ]" />
+
             <div className="space-y-1">
               <h2 className="text-heading-display-light">
                 Numbers that

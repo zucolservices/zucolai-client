@@ -54,7 +54,7 @@ const ValuesGrid = () => {
       <GradientsLeftRight />
       <div className='relative z-10 w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-16 pt-16 lg:pt-16'>
         <div className='hidden md:block' ref={sectionRef}>
-          <HeadingPurple title="{ Our Values }" />
+          <HeadingPurple title="[Our Values]" />
        <p className="max-w-2xl text-[#00000066]/40 text-[28px] leading-[36px]">
             Trusted AI.<br /> <span className='text-black'>Real Impact.</span>
           </p>

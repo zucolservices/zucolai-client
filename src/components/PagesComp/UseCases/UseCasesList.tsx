@@ -1,5 +1,6 @@
  import React from 'react'
  import Link from 'next/link'
+import HeadingPurple from '@/components/HeadingPurple';
 
 const cardsContent = [
     {
@@ -30,19 +31,7 @@ const UseCasesList = () => {
         <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto  py-[100px] lg:py-[140px]">
             <div className='space-y-6'>
                 <div className='space-y-6'>
-                    <p
-                        style={{
-                            fontFamily: 'ChakraPetch, sans-serif',
-                            fontWeight: 600,
-                            fontStyle: 'SemiBold',
-                            fontSize: '14px',
-                            lineHeight: '24px',
-                            color: '#BA8DFF',
-                        }}
-                        className="tracking-wide mb-2 md:mb-4"
-                    >
-                        [ Let&apos;s Build Your Success Story ]
-                    </p>
+                  <HeadingPurple title="[Let&apos;s Build Your Success Story]" />
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Case Studies</span>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>

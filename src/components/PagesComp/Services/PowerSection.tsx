@@ -1,6 +1,7 @@
 "use client";
 
 import GradientsLeftRight from "@/components/GradientsLeftRight";
+import HeadingPurple from "@/components/HeadingPurple";
 import { useEffect, useRef, useState } from "react";
 
 const PowerSection = () => {
@@ -83,19 +84,8 @@ const PowerSection = () => {
             <GradientsLeftRight />
 
             <div className="w-full px-6 md:px-16 lg:px-24 max-w-[60rem] mx-auto pb-8 md:pb-32 pt-16 lg:pt-32 text-center">
-                <p
-                    style={{
-                        fontFamily: 'ChakraPetch, sans-serif',
-                        fontWeight: 600,
-                        fontStyle: 'SemiBold',
-                        fontSize: '14px',
-                        lineHeight: '24px',
-                        color: '#BA8DFF',
-                    }}
-                    className="tracking-wide mb-2 md:mb-4 max-w-xl mx-auto text-left"
-                >
-                    [ Power of Conversational AI ]
-                </p>
+                    <HeadingPurple title="[ Power of Conversational AI ]" />
+
                 <div className=" " ref={sectionRef}>
                     <div className="max-w-xl mx-auto text-left text-[#00000066]/40 text-[24px] leading-[32px] lg:text-[32px] lg:leading-[40px]">
                         {renderAnimatedText("Generative AI reshapes how businesses", 0)}

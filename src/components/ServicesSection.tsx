@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import HeadingPurple from "./HeadingPurple";
 
 // Hook to detect device type
 const useDeviceType = () => {
@@ -36,9 +37,7 @@ export default function ServicesSection() {
       <div className="max-w-sm mx-auto">
         {/* Header */}
         <div className="mb-4 text-left">
-          <p className="text-purple-label">
-            [ Our Services ]
-          </p>
+       <HeadingPurple title="[ Our Services ]" />
           <h2 className="text-heading-display-light">
             Elevating AI Services.
           </h2>
@@ -193,9 +192,8 @@ export default function ServicesSection() {
     <section className="py-16 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="mb-6 text-center">
-          <p className="text-purple-label">
-            [ Our Services ]
-          </p>
+              <HeadingPurple title="[ Our Services ]" />
+
           <h2 className="text-heading-display-light">
             Elevating AI Services.
           </h2>
@@ -349,9 +347,8 @@ export default function ServicesSection() {
     <section className="py-32 px-24 bg-white overflow-hidden">
       <div className="max-w-[70rem] mx-auto">
         <div className="mb-12">
-          <p className="text-purple-label">
-            [ Our Services ]
-          </p>
+              <HeadingPurple title="[ Our Services ]" />
+
           <div className="space-y-1">
             <h2 className="text-heading-display-light">
               Elevating AI Services.

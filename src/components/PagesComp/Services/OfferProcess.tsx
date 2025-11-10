@@ -1,3 +1,4 @@
+import HeadingPurple from '@/components/HeadingPurple';
 import Image from 'next/image'
 import React from 'react'
 
@@ -28,19 +29,8 @@ const OfferProcess = () => {
         <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto pb-8 md:pb-16 pt-8">
             <div className='lg:flex flex-col md:flex-row space-y-6 lg:space-y-0 gap-4'>
                 <div className='space-y-6'>
-                    <p
-                        style={{
-                            fontFamily: 'ChakraPetch, sans-serif',
-                            fontWeight: 600,
-                            fontStyle: 'SemiBold',
-                            fontSize: '14px',
-                            lineHeight: '24px',
-                            color: '#BA8DFF',
-                        }}
-                        className="tracking-wide mb-2 md:mb-4 "
-                    >
-                        [  Solutions We Provide  ]
-                    </p>
+                          <HeadingPurple title="[ Solutions We Provide ]" />
+
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Offerings</span></div>
                     <div className="bg-[#FFF5FF] rounded-[16px] p-6 relative md:min-h-[220px]">
                         <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative'>
@@ -70,19 +60,8 @@ const OfferProcess = () => {
                     </div>
                 </div>
                 <div className='space-y-6'>
-                    <p
-                        style={{
-                            fontFamily: 'ChakraPetch, sans-serif',
-                            fontWeight: 600,
-                            fontStyle: 'SemiBold',
-                            fontSize: '14px',
-                            lineHeight: '24px',
-                            color: '#BA8DFF',
-                        }}
-                        className="tracking-wide mb-2 md:mb-4 "
-                    >
-                        [ Behind The Build ]
-                    </p>
+                          <HeadingPurple title="[ Behind The Build ]" />
+
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Process</span>
                     </div>
                     <div className="bg-[#73BFFD26] rounded-[16px] p-6 relative">

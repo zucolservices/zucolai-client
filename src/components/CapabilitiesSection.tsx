@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import HeadingPurple from "./HeadingPurple";
 
 const capabilities = [
   {
@@ -46,9 +47,9 @@ export default function CapabilitiesSection() {
         <div className="relative z-10">
           {/* Header */}
           <div className="mb-12 md:mb-16 lg:mb-24" ref={sectionRef}>
-            <p className="text-sm tracking-wide mb-4 inline-block font-medium text-[#BA8DFF] py-1 bg-[#BA8DFF]/10 rounded-full">
-              [ Our Capabilities ]
-            </p>
+        
+        
+            <HeadingPurple title="[ Our Capabilities ]" />
             <div className="max-w-4xl">
               <h2 className="text-[20px] md:text-[24px] lg:text-[40px] xl:text-[48px] leading-[1.2] font-light flex flex-wrap gap-x-2">
                 {/* First sentence */}

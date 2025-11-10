@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import HeadingPurple from "./HeadingPurple";
 
 const industries = [
   { name: "Retail", image: "/images/retail.png" },
@@ -45,9 +46,8 @@ export default function SolutionsSection() {
         <div className="lg:hidden text-center text-left mb-8 space-y-6">
        
           <div className="space-y-[0.4px]">
-               <p className="text-sm mb-[8px] tracking-wide inline-block font-medium text-[#BA8DFF] py-1 rounded-full">
-            [ Our Solutions ]
-          </p>
+               <HeadingPurple title="[ Our Solutions ]" />
+        
             <h2
               className="text-[24px] lg:text-[40px]"
             >
@@ -66,9 +66,7 @@ export default function SolutionsSection() {
           {/* Left Content - Desktop */}
           <div className="lg:col-span-5 hidden lg:block">
             <div className="space-y-1 mt-12">
-              <p className="text-sm tracking-wide mb-4 inline-block font-medium text-[#BA8DFF] py-1 rounded-full">
-                [ Our Solutions ]
-              </p>
+              <HeadingPurple title="[ Our Solutions ]" />
               <h2 className="text-heading-display-light">
                 Engineered for Impact.
               </h2>

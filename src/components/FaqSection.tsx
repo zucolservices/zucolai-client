@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import HeadingPurple from "./HeadingPurple";
 
 const faqs = [
   {
@@ -38,9 +39,8 @@ export default function FaqSection() {
       <div className="max-w-[90rem] mx-auto">
         {/* Header */}
         <div className="lg:text-center mb-20">
-          <p className="text-purple-label">
-            [ FAQ ]
-          </p>
+                <HeadingPurple title="[ FAQ ]" />
+
           <div className="space-y-2">
             <h2 className="text-heading-display-light">
               All Your Questions,
