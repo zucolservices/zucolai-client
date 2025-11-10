@@ -35,7 +35,7 @@ export default function ServicesSection() {
     <section className="py-12 px-4 bg-white">
       <div className="max-w-sm mx-auto">
         {/* Header */}
-        <div className="mb-4 text-center">
+        <div className="mb-4 text-left">
           <p className="text-purple-label">
             [ Our Services ]
           </p>
@@ -518,7 +518,7 @@ export default function ServicesSection() {
 
         </div>
       </div>
-    </section>
+    </section>   
   );
 
   // Render based on device type

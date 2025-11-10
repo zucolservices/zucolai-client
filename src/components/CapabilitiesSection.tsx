@@ -163,7 +163,7 @@ export default function CapabilitiesSection() {
                     text-[20px] md:text-[30px]
                     leading-[1.33] font-light tracking-[-0.02em] 
                     text-[#FFFFFF]
-                    lg:text-[#FFFFFF]/60 lg:group-hover:text-[#BA8DFF]
+                    lg:text-[#FFFFFF]/90 lg:group-hover:text-[#BA8DFF]
                      mb-1 md:mb-2 lg:mb-4 relative z-10 
                     transition-all duration-500 w-full
                     lg:text-glow
