@@ -95,7 +95,7 @@ const OurServices = () => {
             </p>
             <div className="w-full border-b border-[#00000040]/25 hidden md:block"></div>
             <div className="flex justify-end w-full" ref={sectionRef}>
-                <div className="max-w-xl p-4 text-left text-[#00000066]/40 text-[32px] leading-[40px]">
+                <div className="max-w-xl p-4 text-left text-[#00000066]/40 text-[24px] md:text-[32px] leading-[32px] md:leading-[40px]">
                     {renderAnimatedText("From blueprint to breakthrough,", 0)}
                     {renderAnimatedText("explore how our most in-demand All", 4)}
                     {renderAnimatedText("capabilities are built to solve complex,", 10)}

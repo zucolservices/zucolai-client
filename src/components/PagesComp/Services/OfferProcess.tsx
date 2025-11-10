@@ -44,19 +44,19 @@ const OfferProcess = () => {
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Offerings</span></div>
                     <div className="bg-[#FFF5FF] rounded-[16px] p-6 relative md:min-h-[220px]">
                         <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative'>
-                            <div className="flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
+                            <div className="flex flex-row justify-between items-center relative z-10 gap-4">
                                 <div>
                                     {cardOneContent?.map((item, index) => (
                                         <div className="my-4 flex items-start gap-3 flex-shrink-0" key={index}>
-                                            <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                                            <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center">
                                                 <RightIcons />
                                             </div>
-                                            <p style={{ fontWeight: 300 }} className="text-[16px] leading-[24px] font-normal  text-[#000000]">{item}</p>
+                                            <p style={{ fontWeight: 300 }} className="text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] font-normal  text-[#000000]">{item}</p>
                                         </div>
                                     ))}
                                 </div>
 
-                                <div className="aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12 group-hover:translate-y-4 w-32 md:w-auto">
+                                <div className="aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12 group-hover:translate-y-4 w-auto">
                                     <Image
                                         src="/images/svgs/image 1.svg"
                                         alt="Verticalized AI Innovation"
@@ -87,18 +87,18 @@ const OfferProcess = () => {
                     </div>
                     <div className="bg-[#73BFFD26] rounded-[16px] p-6 relative">
                         <div className='group cursor-pointer transition-all duration-300 hover:-lg -[0_4px_20px_rgba(0,0,0,0.08)] border-2 border-transparent relative'>
-                            <div className="flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
+                            <div className="flex flex-row justify-between items-center relative z-10 gap-4">
                                 <div>
                                     {cardTwoContent?.map((item, index) => (
                                         <div className="my-4 flex items-start gap-3 flex-shrink-0" key={index}>
                                             <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                                                 <RightIcons />
                                             </div>
-                                            <p style={{ fontWeight: 300 }} className="text-[16px] leading-[24px]  text-[#000000]">{item}</p>
+                                            <p style={{ fontWeight: 300 }} className="text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] font-normal  text-[#000000]">{item}</p>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12 group-hover:-translate-y-4 w-32 md:w-auto">
+                                <div className="aspect-square transition-all duration-700 group-hover:scale-125 group-hover:rotate-12 group-hover:-translate-y-4 w-auto">
                                     <Image
                                         src="/images/svgs/image2.svg"
                                         alt="Verticalized AI Innovation"

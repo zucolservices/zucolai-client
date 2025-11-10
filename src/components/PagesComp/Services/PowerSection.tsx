@@ -97,7 +97,7 @@ const PowerSection = () => {
                     [ Power of Conversational AI ]
                 </p>
                 <div className=" " ref={sectionRef}>
-                    <div className="max-w-xl mx-auto text-left text-[#00000066]/40 text-[32px] leading-[40px]">
+                    <div className="max-w-xl mx-auto text-left text-[#00000066]/40 text-[24px] leading-[32px] lg:text-[32px] lg:leading-[40px]">
                         {renderAnimatedText("Generative AI reshapes how businesses", 0)}
                         {renderAnimatedText("create and innovate. It produces text,", 5)}
                         {renderAnimatedText("images, and videos, helping you move", 11)}
