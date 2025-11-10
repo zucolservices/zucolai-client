@@ -65,6 +65,23 @@ const TeamSection: React.FC = () => {
     const [animatedWords, setAnimatedWords] = useState(new Set<number>());
     const infoRef = useRef<HTMLDivElement>(null);
     const [infoInView, setInfoInView] = useState(false);
+    const [animationDone, setAnimationDone] = useState(false);
+
+    // Lines to animate and their starting word offsets
+    const lines = [
+        "We don't just build AI tools we design",
+        "them to solve real problems at scale.",
+        "Zucol AI brings together deep tech",
+        "and business understanding.",
+    ];
+    const lineOffsets: number[] = (() => {
+        let acc = 0;
+        return lines.map((l) => {
+            const start = acc;
+            acc += l.split(" ").length;
+            return start;
+        });
+    })();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -85,26 +102,27 @@ const TeamSection: React.FC = () => {
 
     useEffect(() => {
         if (!isInView) return;
-        const lines = [
-            "We don't just build AI tools we design",
-            "them to solve real problems at scale.",
-            "Zucol AI brings together deep tech",
-            "and business understanding.",
-        ];
-
         let globalWordIndex = 0;
+        const perWordDelay = 150; // slower animation
+        const totalWords = lines.reduce((sum, l) => sum + l.split(" ").length, 0);
 
         lines.forEach((line) => {
             const wordsInLine = line.split(" ");
-
             wordsInLine.forEach((_, wordIndexInLine) => {
                 const currentWordIndex = globalWordIndex;
                 setTimeout(() => {
-                    setAnimatedWords(prev => new Set([...prev, currentWordIndex]));
-                }, wordIndexInLine * 80);
+                    setAnimatedWords((prev) => new Set([...prev, currentWordIndex]));
+                    if (currentWordIndex === totalWords - 1) {
+                        setAnimationDone(true);
+                    }
+                }, (globalWordIndex) * perWordDelay);
                 globalWordIndex++;
             });
         });
+
+        // Fallback in case StrictMode double-invocation interferes
+        const doneTimeout = setTimeout(() => setAnimationDone(true), totalWords * perWordDelay + 300);
+        return () => clearTimeout(doneTimeout);
     }, [isInView]);
 
     useEffect(() => {
@@ -117,6 +135,11 @@ const TeamSection: React.FC = () => {
         if (infoRef.current) observer.observe(infoRef.current);
         return () => observer.disconnect();
     }, []);
+
+    // As a safety, if the heading animation finished, reveal the grid
+    useEffect(() => {
+        if (animationDone) setInfoInView(true);
+    }, [animationDone]);
 
     const renderAnimatedText = (text: string, startIndex: number = 0): React.JSX.Element[] => {
         return text.split(" ").map((word, i) => {
@@ -140,16 +163,16 @@ const TeamSection: React.FC = () => {
             <div ref={sectionRef}>
                 <HeadingPurple title="[ Our Team ]" />
                 <p style={{ fontWeight: 300 }} className="max-w-2xl text-[#00000066]/40 text-[32px] leading-[48px] font-light">
-                    {renderAnimatedText("We don't just build AI tools we design", 0)}
+                    {renderAnimatedText(lines[0], lineOffsets[0])}
                     <br />
-                    {renderAnimatedText("them to solve real problems at scale.", 8)}
+                    {renderAnimatedText(lines[1], lineOffsets[1])}
                     <br />
-                    {renderAnimatedText("Zucol AI brings together deep tech", 15)}
+                    {renderAnimatedText(lines[2], lineOffsets[2])}
                     <br />
-                    {renderAnimatedText("and business understanding.", 21)}
+                    {renderAnimatedText(lines[3], lineOffsets[3])}
                 </p>
             </div>
-            <div ref={infoRef} className={`mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8`}>
+            <div ref={infoRef} className={`mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 transition-opacity duration-500 ${animationDone ? 'opacity-100' : 'opacity-0'}`}>
                 <div className={`transition-all duration-500 lg:duration-700 ${infoInView ? 'lg:opacity-100 lg:translate-y-0' : 'lg:opacity-0 lg:translate-y-2'}`}>
                     <h3 style={{ fontWeight: 300 }} className='text-[#0B0B0B] text-[24px] font-light lg:text-[40px] '>Who We Are:</h3>
                     <p className='text-[#0B0B0B] text-[16px] leading-[24px] lg:text-[16px] font-light lg:max-w-[200px]'>A team of data scientists, engineers, and strategists with AI expertise.</p>
