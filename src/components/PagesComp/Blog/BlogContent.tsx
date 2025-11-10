@@ -35,7 +35,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ cardData = [] }) => {
     return (
         <div className='relative z-10'>
             <GradientsLeftRight />
-            <section className='max-w-[75rem] mx-auto my-[80px] px-4'>
+            <section className='max-w-[75rem] mx-auto my-[80px] px-4 relative z-20'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {
                         items.map((item: BlogCard, index: number) => (
