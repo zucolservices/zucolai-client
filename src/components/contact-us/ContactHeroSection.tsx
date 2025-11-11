@@ -20,28 +20,39 @@ export default function ContactHeroSection() {
                     </div>
 
                     {/* RIGHT VISUAL AREA */}
-                    <div className="relative w-full lg:w-[48%]  h-[80vh] lg:h-screen overflow-hidden">
-                        <Image src="/backgrounds/TextureHero.png" alt="Hero" fill className="absolute inset-0 w-full h-full  object-cover opacity-[55%]" />
+                 {/* RIGHT VISUAL AREA */}
+<div className="relative w-full lg:w-[48%] h-[80vh] lg:h-screen overflow-hidden bg-black">
 
+    {/* Base Image */}
+    <Image
+        src="/backgrounds/TextureHero.png"
+        alt="Hero"
+        fill
+        className="absolute inset-0 w-full h-full object-cover opacity-60"
+    />
 
-                        {/* GIF Background */}
-                        <img
-                            src="/backgrounds/contact.gif"
-                            alt="Contact animation"
-                            className="absolute inset-0 w-full h-full  object-cover mix-blend-color-dodge rotate-180 origin-[50%_50%]"
-                        />
+    {/* GIF with Blend */}
+    <img
+        src="/backgrounds/contact.gif"
+        alt="Contact animation"
+        className="absolute inset-0 w-full h-full object-cover mix-blend-screen rotate-180"
+    />
 
-                        {/* Hue & Glow Overlay */}
-                        <Image
+    {/* Color Overlay */}
+    <Image
                             src="/backgrounds/services-overlay.png"
                             alt="Overlay"
                             fill
                             className="object-cover mix-blend-hue pointer-events-none opacity-[94%]"
                         />
 
-                        {/* Edge gradient to blend seam between columns */}
-                        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-l  from-transparent to-black/100" />
-                    </div>
+    {/* Bottom Fade to Black */}
+    <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-black" />
+
+    {/* Left Seam Fix (fade into text area) */}
+    <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-l from-transparent to-black" />
+</div>
+
                 </div>
             </div>
         </section>

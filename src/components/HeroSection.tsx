@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function HeroSection() {
   const router = useRouter();
   return (
-    <section className="relative h-screen bg-gradient-to-b from-[#00191c] via-[#00191c] to-[#00191c] lg:h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
+    <section className="relative  bg-gradient-to-b from-[#00191c] via-[#00191c] to-[#00191c] h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
       <video
         className="absolute object-cover mt-0 h-[100%] lg:h-auto  lg:rotate-[90deg] lg:mt-[1%] 2xl:mt-[8%]   lg:right-[10%]  "
         src="/backgrounds/hero.mp4"
