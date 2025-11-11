@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BlogMainHeroSection() {
     return (
-        <section className="relative h-screen bg-gradient-to-b from-[#00191c] via-[#000] to-[#000] lg:h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
+        <section className="relative bg-gradient-to-b from-[#00191c] via-[#000] to-[#000] h-[90vh] flex items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
 
             <video
                 className="absolute object-cover rotate-[90deg] h-full lg:h-auto   mt-[1%]  right-[-1%]  "

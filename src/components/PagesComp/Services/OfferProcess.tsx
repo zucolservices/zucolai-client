@@ -41,7 +41,7 @@ const OfferProcess = () => {
                                             <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center">
                                                 <RightIcons />
                                             </div>
-                                            <p style={{ fontWeight: 300 }} className="text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] font-normal  text-[#000000]">{item}</p>
+                                            <p style={{ fontWeight: 300 }} className="text-[14px] lg:text-[16px] leading-[16px] lg:leading-[24px] font-normal  text-[#000000]">{item}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -73,7 +73,7 @@ const OfferProcess = () => {
                                             <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                                                 <RightIcons />
                                             </div>
-                                            <p style={{ fontWeight: 300 }} className="text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] font-normal  text-[#000000]">{item}</p>
+                                            <p style={{ fontWeight: 300 }} className="text-[14px] lg:text-[16px] leading-[16px] lg:leading-[24px] font-normal  text-[#000000]">{item}</p>
                                         </div>
                                     ))}
                                 </div>

@@ -4,7 +4,7 @@ import HeadingPurple from "@/components/HeadingPurple";
 export default function ServicesHeroSection() {
   return (
     <>
-      <section className="relative bg-black h-screen lg:h-[90vh] flex flex-col items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
+      <section className="relative bg-black h-[90vh] flex flex-col items-end lg:items-center overflow-hidden border-b border-gray-200 rounded-t-none md:rounded-t-2xl rounded-b-2xl">
   
         {/* Layer 1: Background base */}
         <div className="absolute inset-0 z-0 bg-black" />
