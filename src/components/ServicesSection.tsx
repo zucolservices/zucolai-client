@@ -59,7 +59,7 @@ export default function ServicesSection() {
                   Seamless adoption powered by human-centered design.
                 </p>
               </div>
-              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
+              <div className="w-26 h-26 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/userExperience.svg"
                   alt="Industrial-Grade User Experience"
@@ -81,7 +81,7 @@ export default function ServicesSection() {
                   Rapid iteration with AI-powered assistance.
                 </p>
               </div>
-              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
+              <div className="w-26 h-26 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/swiftaicollaboration.svg"
                   alt="Swift AI Collaboration"
@@ -103,7 +103,7 @@ export default function ServicesSection() {
                   End-to-end AI solutions from ideation to production.
                 </p>
               </div>
-              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
+              <div className="w-26 h-26 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/aipartner.svg"
                   alt="Full-Stack AI Partner"
@@ -125,7 +125,7 @@ export default function ServicesSection() {
                   Enterprise-grade security from day one.
                 </p>
               </div>
-              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
+              <div className="w-26 h-26 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/secureDesign.svg"
                   alt="Secure by Design"
@@ -147,7 +147,7 @@ export default function ServicesSection() {
                   Sector-specific AI tuned to solve real pain points.
                 </p>
               </div>
-              <div className="w-24 h-24 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
+              <div className="w-26 h-26 relative ml-4 flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out">
                 <Image
                   src="/images/svgs/aiinnovation.svg"
                   alt="Verticalized AI Innovation"

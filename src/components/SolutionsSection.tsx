@@ -143,7 +143,7 @@ export default function SolutionsSection() {
             <div className="w-full">
               <div className="relative w-full aspect-[1.3] bg-[#F8F8FF] rounded-[2rem] overflow-hidden">
                 {/* Image container */}
-                <div className="absolute inset-0 flex items-center justify-center px-8 pt-8 pb-20">
+                <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-full h-full">
                     <Image
                       src={selected.image}

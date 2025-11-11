@@ -63,7 +63,7 @@ export default function StatsComponent() {
                   {[...row.items, ...row.items].map((stat, index) => (
                     <div
                       key={`${row.row}-${index}`}
-                      className="bg-[#F8F8F8]  rounded-[16px] lg:p-10 p-4 w-[350px] flex-shrink-0 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:brightness-[1.02]"
+                      className="bg-[#F8F8F8]  rounded-[16px] lg:p-10 p-4 md:w-[250px] lg:w-[350px] flex-shrink-0 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 hover:brightness-[1.02]"
                     >
                       <h3 className="text-[#BA8DFF] text-[28.6px] lg:text-[40px] leading-[48px] tracking-[-2%] font-[600] lg:mb-4">
                         {stat.value}
