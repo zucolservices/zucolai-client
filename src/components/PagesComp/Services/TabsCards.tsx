@@ -113,10 +113,10 @@ const TabsCards = () => {
             </div>
 
             {/* Tab Content */}
-            <div key={activeTab} className="mt-[60px] flex flex-col md:flex-row gap-[60px] items-start md:min-h-[400px] animate-fadeIn">
-                <div className="w-full md:w-auto">
+            <div className="mt-[60px]  flex flex-col md:flex-row gap-[60px] items-start min-h-[520px] md:min-h-[520px] animate-fadeIn">
+                <div className="w-full md:w-[50%] md:min-h-[400px]">
                     <video
-                        className="rounded-lg w-full md:w-[628px] h-auto"
+                        className="rounded-lg w-full md:w-[628px] h-auto md:h-[352px] lg:h-[352px] object-cover"
                         autoPlay
                         loop
                         muted
@@ -127,7 +127,7 @@ const TabsCards = () => {
                     </video>
                 </div>
 
-                <div className="">
+                <div className="md:min-h-[400px]  md:w-[50%]">
                     <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[32px] md:leading-[40px] lg:leading-[48px] lg:font-semibold mb-4"> {activeContent.heading}</h2>
                     {activeContent.points?.map((item, index) => (
                         <div className="my-4 flex items-start lg:items-center gap-[6px] lg:gap-3 flex-shrink-0" key={index}>

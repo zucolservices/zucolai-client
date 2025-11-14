@@ -28,7 +28,7 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
       "Higher lead capture with structured data collection.",
       "Lower support costs and improved customer experience.",
     ],
-    featuresLead: "Turpis ultrices imperdiet in id. Diam dui purus blandit urna.",
+    featuresLead: "",
     featuresPara1:
 "",    featuresList1: [
       "High volume of repetitive queries about loan information.",

@@ -1,5 +1,5 @@
- import React from 'react'
- import Link from 'next/link'
+import React from 'react'
+import Link from 'next/link'
 import HeadingPurple from '@/components/HeadingPurple';
 
 const cardsContent = [
@@ -31,19 +31,19 @@ const UseCasesList = () => {
         <section className="w-full px-6 md:px-16 lg:px-24 max-w-[80rem] mx-auto  py-[100px] lg:py-[140px]">
             <div className='space-y-6'>
                 <div className='space-y-6'>
-                  <HeadingPurple title="[Let&apos;s Build Your Success Story]" />
+                    <HeadingPurple title="[Let&apos;s Build Your Success Story]" />
                     <div className='text-[40px] leading-[48px] text-[#000000]/80'>Our <span className='text-[#000000] font-medium'>Case Studies</span>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                         {cardsContent?.map((item, index) => (
                             <div
                                 key={index}
-                                    className="group relative rounded-[16px] p-6 border border-[#00000033]/60 overflow-hidden"
+                                className="group relative rounded-[16px] p-6 border border-[#00000033]/60 overflow-hidden"
                                 style={{ height: '300px' }}
                             >
                                 {/* Hover background image layer */}
                                 <div
-                                  className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-100 lg:opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100 z-0"
+                                    className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-100 lg:opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100 z-0"
                                     style={{ backgroundImage: `url(${item.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '300px' }}
                                 />
                                 <div className="relative z-10 rounded-[12px] space-y-3">

@@ -20,8 +20,8 @@ const OfferProcess = () => {
     ];
 
     const cardTwoContent = [
-        "AI-powered inbound/outbound calling for sales, support, and reminders",
-        "Multilingual smart IVR replacement for seamless self-service.",
+        "Integrate AI agent with client CRM and telephony systems.",
+        "Automate query handling and lead qualification with real-time reporting.",
     ];
 
 
