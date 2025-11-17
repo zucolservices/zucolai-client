@@ -37,7 +37,7 @@ export default function CasesHeroSection({
     <section
       className="relative min-h-screen border border-[white]">
       <div
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover "
         style={{
           backgroundImage: `url('${backgroundImage}')`,
           backgroundSize: "cover",

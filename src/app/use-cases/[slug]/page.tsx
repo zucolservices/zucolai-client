@@ -12,10 +12,8 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
     industry: "Financial Services",
     heroImage: "/images/use-cases/1.png",
     backgroundImage: "/images/image_1001978347.png",
-
-    // SectionOne content
-    background:
-      "Vridhi Home Finance needed a scalable solution to handle thousands of customer queries related to loan products and eligibility. Manual call centers were costly and often resulted in long wait times.",
+background:
+      "Zoice Style needed a scalable channel to provide training and gather customer scheme-related data.",
     challenges: [
       "High volume of repetitive queries about loan information.",
       "Manual agents struggled to respond quickly and accurately.",
@@ -92,12 +90,11 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
     "zoice-style-demo-use-cases": {
     title: "Training WhatsApp Bot",
     subtitle: "Chatbots & Virtual Assistants",
-    client: "Vridhi Home Finance",
+    client: "Zoice",
     industry: "Financial Services",
-    heroImage: "/images/use-cases/2.png", // replace with your actual image
+    heroImage: "/images/use-cases/1.png",// replace with your actual image
     backgroundImage: "/images/use-cases/training-bot-bg.png", // replace with your actual image
-
-    background:
+   background:
       "The client needed a scalable channel to provide training and gather customer scheme-related data.",
 
     challenges: [
@@ -121,8 +118,9 @@ const CASE_STUDIES: Record<string, CaseStudyDetailData> = {
     featuresPara3: "",
     featuresList3: [],
     conclusion: "",
-  },
-
+  
+  
+  }
 };
 
 export default async function CaseStudyDetail({ params }: { params: Promise<{ slug: string }> }) {

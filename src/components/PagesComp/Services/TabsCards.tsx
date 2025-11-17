@@ -130,11 +130,11 @@ const TabsCards = () => {
                 <div className="md:min-h-[400px]  md:w-[50%]">
                     <h2 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[32px] md:leading-[40px] lg:leading-[48px] lg:font-semibold mb-4"> {activeContent.heading}</h2>
                     {activeContent.points?.map((item, index) => (
-                        <div className="my-4 flex items-start lg:items-center gap-[6px] lg:gap-3 flex-shrink-0" key={index}>
+                        <div className="my-2 flex items-start lg:items-center gap-[6px] lg:gap-3 flex-shrink-0" key={index}>
                             <div className="border rounded-full p-1 border-[1.5px] border-[#000000]/60 flex-shrink-0 w-4 h-4 lg:w-5 lg:h-5 flex items-center justify-center">
                                 <RightIcons />
                             </div>
-                            <p className="text-[14px] md:text-[24px] lg:text-[20px] leading-[20px] md:leading-[28px] lg:leading-[28px] font-normal text-[#000000]/60">{item}</p>
+                            <p className="text-[14px] md:text-[24px] lg:text-[17px] leading-[20px] md:leading-[24px] lg:leading-[28px] font-normal text-[#000000]/60">{item}</p>
                         </div>
                     ))}
 
